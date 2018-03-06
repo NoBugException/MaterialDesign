@@ -9,4 +9,15 @@
 
     <color name="left_item_background">#bebcbc</color>
     <color name="right_item_background">#ffffff</color>
+
+    <color name="slidemode1">#ec1109</color>
+    <color name="slidemode2_1">#e9cb08</color>
+    <color name="slidemode2_2">#28063e</color>
+    <color name="slidemode3">#0e119e</color>
+
+    <color name="tab_indicator">#7b7b94</color>
+    <color name="tab_tv_normal">#657c58</color>
+    <color name="tab_tv_selected">#8a47a3</color>
+    <color name="bg_tab_border_selecter">#434470</color>
+
 </resources>

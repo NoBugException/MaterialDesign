@@ -21,6 +21,16 @@
 
         <activity android:name=".BottomNavigationActivity"/>
 
+        <activity android:name=".ViewFlipper1Activity"/>
+
+        <activity android:name=".ViewFlipper2Activity"/>
+
+        <activity android:name=".ViewPager1Activity"/>
+
+        <activity android:name=".ViewPager2Activity"/>
+
+        <activity android:name=".ViewFlowActivity"/>
+
     </application>
 
 </manifest>

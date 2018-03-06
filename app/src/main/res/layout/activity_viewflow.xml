@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="135dp"
+            android:orientation="vertical" >
+
+            <com.design.material.materialdesign.viewflow.ViewFlow
+                android:id="@+id/viewflow"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                app:sidebuffer="3"/>
+        </RelativeLayout>
+        <com.design.material.materialdesign.viewflow.CircleFlowIndicator
+            android:id="@+id/viewflowindic"
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            app:fadeOut="1"
+            app:inactiveType="fill"
+            app:activeColor="@color/colorAccent"
+            app:inactiveColor="@color/colorPrimary"
+            app:activeType="fill"
+            app:radius="5dp"
+            android:paddingTop="125dp" />
+        <!--圆点指示器还支持activeColor、inactiveColor、activeType(填充或描边)、
+            inactiveType(填充或描边)、
+            fadeOut(设置圆点自动隐藏的秒数，若为0则不会自动隐藏)、
+            radius(圆点的半径)等。
+        -->
+    </FrameLayout>
+</LinearLayout>
