@@ -9,6 +9,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.design.material.materialdesign.bottomnavgationview.BottomNavigationBean;
+import com.design.material.materialdesign.flycotablayout.FlycoBean;
+import com.design.material.materialdesign.flycotablayout.acticity.CommonTabActivity;
+import com.design.material.materialdesign.flycotablayout.acticity.SegmentTabActivity;
+import com.design.material.materialdesign.flycotablayout.acticity.SlidingTabActivity;
 import com.design.material.materialdesign.threeslideview.SlideBean;
 import com.design.material.materialdesign.bottomnavgationview.BottomNavigationActivity;
 import com.design.material.materialdesign.threeslideview.viewflipper.activity.ViewFlipper1Activity;
@@ -49,6 +53,12 @@ public class MaterialDesign extends BaseActivity {
         slideBean.setModelName3("ViewFlow");
         mDatas.add(slideBean);
 
+        FlycoBean flycoBean = new FlycoBean();
+        flycoBean.setName("flycotablayout");
+        flycoBean.setModelName1("SlidingTabLayout");
+        flycoBean.setModelName2("CommonTabLayout");
+        flycoBean.setModelName3("SegmentTabLayout");
+        mDatas.add(flycoBean);
 
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
@@ -68,6 +78,8 @@ public class MaterialDesign extends BaseActivity {
                     return MaterialItemViewType.BOTTOMNAVIGATION;
                 }else if(baseBean instanceof SlideBean){
                     return MaterialItemViewType.SILIDE;
+                }else if(baseBean instanceof FlycoBean){
+                    return MaterialItemViewType.FLYCO;
                 }
                 return 0;
             }
@@ -140,6 +152,40 @@ public class MaterialDesign extends BaseActivity {
                             @Override
                             public void onClick(View view) {
                                 startActivity(ViewFlowActivity.class);
+                            }
+                        });
+                        break;
+                    case MaterialItemViewType.FLYCO:
+                        FlycoBean fb = (FlycoBean) baseBean;
+                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+                        view = layoutInflater.inflate(R.layout.item_flyco, null);
+                        linearLayout.addView(view);
+                        TextView flyco_model1 = holder.getView(R.id.flyco_model1);
+                        flyco_model1.setText(fb.getModelName1());
+                        TextView flyco_model2 = holder.getView(R.id.flyco_model2);
+                        flyco_model2.setText(fb.getModelName2());
+                        TextView flyco_model3 = holder.getView(R.id.flyco_model3);
+                        flyco_model3.setText(fb.getModelName3());
+                        mame = holder.getView(R.id.id_item_materialname);
+                        mame.setText(fb.getName());
+                        type = holder.getView(R.id.id_item_materialtype);
+                        type.setText(String.valueOf(fb.getItemViewType()));
+                        holder.setOnClickListener(R.id.flyco_model1, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(SlidingTabActivity.class);
+                            }
+                        });
+                        holder.setOnClickListener(R.id.flyco_model2, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(CommonTabActivity.class);
+                            }
+                        });
+                        holder.setOnClickListener(R.id.flyco_model3, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(SegmentTabActivity.class);
                             }
                         });
                         break;

@@ -31,6 +31,12 @@
 
         <activity android:name=".threeslideview.viewflow.ViewFlowActivity"/>
 
+        <activity android:name=".flycotablayout.acticity.SlidingTabActivity"/>
+
+        <activity android:name=".flycotablayout.acticity.CommonTabActivity"/>
+
+        <activity android:name=".flycotablayout.acticity.SegmentTabActivity"/>
+
     </application>
 
 </manifest>

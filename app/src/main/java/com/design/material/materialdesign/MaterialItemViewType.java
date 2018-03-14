@@ -10,4 +10,6 @@ public class MaterialItemViewType {
     public static final int BOTTOMNAVIGATION = 1;
     //常用的三种滑动组件
     public static final int SILIDE = 2;
+    //可支持展示小红点、消息数的滑动组件
+    public static final int FLYCO = 3;
 }
