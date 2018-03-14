@@ -13,13 +13,13 @@
             android:layout_height="135dp"
             android:orientation="vertical" >
 
-            <com.design.material.materialdesign.viewflow.ViewFlow
+            <com.design.material.materialdesign.threeslideview.viewflow.ViewFlow
                 android:id="@+id/viewflow"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 app:sidebuffer="3"/>
         </RelativeLayout>
-        <com.design.material.materialdesign.viewflow.CircleFlowIndicator
+        <com.design.material.materialdesign.threeslideview.viewflow.CircleFlowIndicator
             android:id="@+id/viewflowindic"
             android:layout_width="wrap_content"
             android:layout_height="140dp"

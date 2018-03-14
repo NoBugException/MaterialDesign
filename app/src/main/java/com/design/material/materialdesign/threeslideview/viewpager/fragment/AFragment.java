@@ -1,4 +1,4 @@
-package com.design.material.materialdesign.fragment;
+package com.design.material.materialdesign.threeslideview.viewpager.fragment;
 
 import android.content.Context;
 import android.os.Bundle;

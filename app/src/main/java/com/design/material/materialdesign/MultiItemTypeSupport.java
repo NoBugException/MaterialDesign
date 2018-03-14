@@ -1,4 +1,4 @@
-package com.design.material.materialdesign.inteface;
+package com.design.material.materialdesign;
 
 /**
  * Created by Q on 2018/3/1.

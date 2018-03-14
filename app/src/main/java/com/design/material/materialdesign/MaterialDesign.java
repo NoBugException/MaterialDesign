@@ -3,19 +3,18 @@ package com.design.material.materialdesign;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.design.material.materialdesign.Constant.MaterialItemViewType;
-import com.design.material.materialdesign.adapter.CommonViewHolder;
-import com.design.material.materialdesign.adapter.MultiItemCommonAdapter;
-import com.design.material.materialdesign.bean.BaseBean;
-import com.design.material.materialdesign.bean.BottomNavigationBean;
-import com.design.material.materialdesign.bean.SlideBean;
-import com.design.material.materialdesign.inteface.MultiItemTypeSupport;
+import com.design.material.materialdesign.bottomnavgationview.BottomNavigationBean;
+import com.design.material.materialdesign.threeslideview.SlideBean;
+import com.design.material.materialdesign.bottomnavgationview.BottomNavigationActivity;
+import com.design.material.materialdesign.threeslideview.viewflipper.activity.ViewFlipper1Activity;
+import com.design.material.materialdesign.threeslideview.viewflipper.activity.ViewFlipper2Activity;
+import com.design.material.materialdesign.threeslideview.viewpager.activity.ViewPager1Activity;
+import com.design.material.materialdesign.threeslideview.viewpager.activity.ViewPager2Activity;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.design.material.materialdesign.Constant;
+package com.design.material.materialdesign;
 
 /**
  * Created by beixinyuan_android on 2018/3/5.

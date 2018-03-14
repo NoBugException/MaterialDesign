@@ -1,12 +1,13 @@
-package com.design.material.materialdesign.bean;
+package com.design.material.materialdesign.threeslideview;
 
-import com.design.material.materialdesign.Constant.MaterialItemViewType;
+import com.design.material.materialdesign.MaterialItemViewType;
+import com.design.material.materialdesign.BaseBean;
 
 /**
  * Created by beixinyuan_android on 2018/3/5.
  */
 
-public class SlideBean extends BaseBean{
+public class SlideBean extends BaseBean {
     //第一种滑动
     private String modelName1;
     //第二种滑动

@@ -1,10 +1,12 @@
-package com.design.material.materialdesign;
+package com.design.material.materialdesign.threeslideview.viewpager.activity;
 
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 
-import com.design.material.materialdesign.adapter.QuickPageAdapter;
+import com.design.material.materialdesign.BaseActivity;
+import com.design.material.materialdesign.R;
+import com.design.material.materialdesign.threeslideview.viewpager.adapter.QuickPageAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

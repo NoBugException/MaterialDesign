@@ -1,7 +1,10 @@
-package com.design.material.materialdesign;
+package com.design.material.materialdesign.threeslideview.viewflipper.activity;
 
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
+
+import com.design.material.materialdesign.BaseActivity;
+import com.design.material.materialdesign.R;
 
 /**
  * Created by beixinyuan_android on 2018/3/6.

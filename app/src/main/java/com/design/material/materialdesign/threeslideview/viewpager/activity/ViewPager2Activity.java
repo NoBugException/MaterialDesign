@@ -1,19 +1,17 @@
-package com.design.material.materialdesign;
+package com.design.material.materialdesign.threeslideview.viewpager.activity;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.design.material.materialdesign.adapter.QuickFragmentPageAdapter;
-import com.design.material.materialdesign.fragment.AFragment;
-import com.design.material.materialdesign.fragment.BFragment;
-import com.design.material.materialdesign.fragment.CFragment;
-import com.design.material.materialdesign.fragment.DFragment;
+import com.design.material.materialdesign.BaseActivity;
+import com.design.material.materialdesign.R;
+import com.design.material.materialdesign.threeslideview.viewpager.adapter.QuickFragmentPageAdapter;
+import com.design.material.materialdesign.threeslideview.viewpager.fragment.AFragment;
+import com.design.material.materialdesign.threeslideview.viewpager.fragment.BFragment;
+import com.design.material.materialdesign.threeslideview.viewpager.fragment.CFragment;
+import com.design.material.materialdesign.threeslideview.viewpager.fragment.DFragment;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -19,17 +19,17 @@
 
         <activity android:name=".MaterialDesign"/>
 
-        <activity android:name=".BottomNavigationActivity"/>
+        <activity android:name=".bottomnavgationview.BottomNavigationActivity"/>
 
-        <activity android:name=".ViewFlipper1Activity"/>
+        <activity android:name=".threeslideview.viewflipper.activity.ViewFlipper1Activity"/>
 
-        <activity android:name=".ViewFlipper2Activity"/>
+        <activity android:name=".threeslideview.viewflipper.activity.ViewFlipper2Activity"/>
 
-        <activity android:name=".ViewPager1Activity"/>
+        <activity android:name=".threeslideview.viewpager.activity.ViewPager1Activity"/>
 
-        <activity android:name=".ViewPager2Activity"/>
+        <activity android:name=".threeslideview.viewpager.activity.ViewPager2Activity"/>
 
-        <activity android:name=".ViewFlowActivity"/>
+        <activity android:name=".threeslideview.viewflow.ViewFlowActivity"/>
 
     </application>
 

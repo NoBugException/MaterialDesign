@@ -1,4 +1,4 @@
-package com.design.material.materialdesign;
+package com.design.material.materialdesign.bottomnavgationview;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;

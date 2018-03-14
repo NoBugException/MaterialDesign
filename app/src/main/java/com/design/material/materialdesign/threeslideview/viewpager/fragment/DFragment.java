@@ -1,4 +1,4 @@
-package com.design.material.materialdesign.fragment;
+package com.design.material.materialdesign.threeslideview.viewpager.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -15,7 +15,7 @@ import com.design.material.materialdesign.R;
  * Created by beixinyuan_android on 2018/3/6.
  */
 
-public class BFragment extends Fragment {
+public class DFragment extends Fragment {
 
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
