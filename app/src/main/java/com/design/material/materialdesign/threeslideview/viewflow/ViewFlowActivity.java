@@ -3,10 +3,7 @@ package com.design.material.materialdesign.threeslideview.viewflow;
 import android.content.res.Configuration;
 
 import com.design.material.materialdesign.BaseActivity;
-import com.design.material.materialdesign.ImageAdapter;
 import com.design.material.materialdesign.R;
-import com.design.material.materialdesign.threeslideview.viewflow.CircleFlowIndicator;
-import com.design.material.materialdesign.threeslideview.viewflow.ViewFlow;
 
 /**
  * 场景:数目不太确定的时候

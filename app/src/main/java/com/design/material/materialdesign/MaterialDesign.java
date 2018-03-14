@@ -13,6 +13,7 @@ import com.design.material.materialdesign.threeslideview.SlideBean;
 import com.design.material.materialdesign.bottomnavgationview.BottomNavigationActivity;
 import com.design.material.materialdesign.threeslideview.viewflipper.activity.ViewFlipper1Activity;
 import com.design.material.materialdesign.threeslideview.viewflipper.activity.ViewFlipper2Activity;
+import com.design.material.materialdesign.threeslideview.viewflow.ViewFlowActivity;
 import com.design.material.materialdesign.threeslideview.viewpager.activity.ViewPager1Activity;
 import com.design.material.materialdesign.threeslideview.viewpager.activity.ViewPager2Activity;
 
@@ -47,9 +48,8 @@ public class MaterialDesign extends BaseActivity {
         slideBean.setModelName2("ViewFlipper");
         slideBean.setModelName3("ViewFlow");
         mDatas.add(slideBean);
-//        mDatas.add("B");
-//        mDatas.add("C");
-//        mDatas.add("D");
+
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
