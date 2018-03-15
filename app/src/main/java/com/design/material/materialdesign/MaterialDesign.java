@@ -15,6 +15,8 @@ import com.design.material.materialdesign.flycotablayout.acticity.SegmentTabActi
 import com.design.material.materialdesign.flycotablayout.acticity.SlidingTabActivity;
 import com.design.material.materialdesign.pdfview.PDFViewActivity;
 import com.design.material.materialdesign.pdfview.PdfViewBean;
+import com.design.material.materialdesign.richtext.RichTextActivity;
+import com.design.material.materialdesign.richtext.RichTextBean;
 import com.design.material.materialdesign.threeslideview.SlideBean;
 import com.design.material.materialdesign.bottomnavgationview.BottomNavigationActivity;
 import com.design.material.materialdesign.threeslideview.viewflipper.activity.ViewFlipper1Activity;
@@ -22,6 +24,7 @@ import com.design.material.materialdesign.threeslideview.viewflipper.activity.Vi
 import com.design.material.materialdesign.threeslideview.viewflow.ViewFlowActivity;
 import com.design.material.materialdesign.threeslideview.viewpager.activity.ViewPager1Activity;
 import com.design.material.materialdesign.threeslideview.viewpager.activity.ViewPager2Activity;
+import com.zzhoujay.richtext.RichText;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,6 +69,10 @@ public class MaterialDesign extends BaseActivity {
         pdfViewBean.setName("pdfView");
         mDatas.add(pdfViewBean);
 
+        RichTextBean richTextBean = new RichTextBean();
+        richTextBean.setName("richText-加载HTML");
+        mDatas.add(richTextBean);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -88,6 +95,8 @@ public class MaterialDesign extends BaseActivity {
                     return MaterialItemViewType.FLYCO;
                 }else if(baseBean instanceof PdfViewBean){
                     return MaterialItemViewType.PDFVIEW;
+                }else if(baseBean instanceof RichTextBean){
+                    return MaterialItemViewType.RICHTEXT;
                 }
                 return 0;
             }
@@ -212,6 +221,22 @@ public class MaterialDesign extends BaseActivity {
                                 startActivity(PDFViewActivity.class);
                             }
                         });
+                        break;
+                        case MaterialItemViewType.RICHTEXT:
+                            RichTextBean rtb = (RichTextBean) baseBean;
+                            layoutInflater = LayoutInflater.from(MaterialDesign.this);
+                            view = layoutInflater.inflate(R.layout.item_richtext, null);
+                            linearLayout.addView(view);
+                            mame = holder.getView(R.id.id_item_materialname);
+                            mame.setText(rtb.getName());
+                            type = holder.getView(R.id.id_item_materialtype);
+                            type.setText(String.valueOf(rtb.getItemViewType()));
+                            holder.setOnClickListener(R.id.root, new View.OnClickListener() {
+                                @Override
+                                public void onClick(View view) {
+                                    startActivity(RichTextActivity.class);
+                                }
+                            });
                         break;
                 }
             }

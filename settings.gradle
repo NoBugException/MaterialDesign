@@ -1,2 +1,3 @@
 include ':app',':circleindicator'
 include ':android-pdf-viewer'
+include ':richtext'

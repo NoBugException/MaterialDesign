@@ -14,4 +14,6 @@ public class MaterialItemViewType {
     public static final int FLYCO = 3;
     //pdf浏览
     public static final int PDFVIEW = 4;
+    //
+    public static final int RICHTEXT = 5;
 }
