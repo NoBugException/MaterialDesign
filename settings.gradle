@@ -1,1 +1,2 @@
 include ':app',':circleindicator'
+include ':android-pdf-viewer'

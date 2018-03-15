@@ -12,4 +12,6 @@ public class MaterialItemViewType {
     public static final int SILIDE = 2;
     //可支持展示小红点、消息数的滑动组件
     public static final int FLYCO = 3;
+    //pdf浏览
+    public static final int PDFVIEW = 4;
 }

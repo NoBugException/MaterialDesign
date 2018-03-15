@@ -13,6 +13,8 @@ import com.design.material.materialdesign.flycotablayout.FlycoBean;
 import com.design.material.materialdesign.flycotablayout.acticity.CommonTabActivity;
 import com.design.material.materialdesign.flycotablayout.acticity.SegmentTabActivity;
 import com.design.material.materialdesign.flycotablayout.acticity.SlidingTabActivity;
+import com.design.material.materialdesign.pdfview.PDFViewActivity;
+import com.design.material.materialdesign.pdfview.PdfViewBean;
 import com.design.material.materialdesign.threeslideview.SlideBean;
 import com.design.material.materialdesign.bottomnavgationview.BottomNavigationActivity;
 import com.design.material.materialdesign.threeslideview.viewflipper.activity.ViewFlipper1Activity;
@@ -60,6 +62,10 @@ public class MaterialDesign extends BaseActivity {
         flycoBean.setModelName3("SegmentTabLayout");
         mDatas.add(flycoBean);
 
+        PdfViewBean pdfViewBean = new PdfViewBean();
+        pdfViewBean.setName("pdfView");
+        mDatas.add(pdfViewBean);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -80,6 +86,8 @@ public class MaterialDesign extends BaseActivity {
                     return MaterialItemViewType.SILIDE;
                 }else if(baseBean instanceof FlycoBean){
                     return MaterialItemViewType.FLYCO;
+                }else if(baseBean instanceof PdfViewBean){
+                    return MaterialItemViewType.PDFVIEW;
                 }
                 return 0;
             }
@@ -186,6 +194,22 @@ public class MaterialDesign extends BaseActivity {
                             @Override
                             public void onClick(View view) {
                                 startActivity(SegmentTabActivity.class);
+                            }
+                        });
+                        break;
+                    case MaterialItemViewType.PDFVIEW:
+                        PdfViewBean pdfvb = (PdfViewBean) baseBean;
+                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+                        view = layoutInflater.inflate(R.layout.item_pdfview, null);
+                        linearLayout.addView(view);
+                        mame = holder.getView(R.id.id_item_materialname);
+                        mame.setText(pdfvb.getName());
+                        type = holder.getView(R.id.id_item_materialtype);
+                        type.setText(String.valueOf(pdfvb.getItemViewType()));
+                        holder.setOnClickListener(R.id.root, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(PDFViewActivity.class);
                             }
                         });
                         break;
