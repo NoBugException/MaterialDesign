@@ -43,6 +43,18 @@
         <activity android:name=".pdfview.PDFViewActivity"/>
 
         <activity android:name=".richtext.RichTextActivity"/>
+
+        <activity android:name=".guideview.GuideViewActivity"/>
+
+        <activity android:name=".guideview.FullActivity"/>
+
+        <activity android:name=".guideview.FragActivity"/>
+
+        <activity android:name=".guideview.MyListActivity"/>
+
+        <activity android:name=".guideview.SimpleGuideViewActivity"/>
+
+        <activity android:name=".guideview.ViewActivity"/>
     </application>
 
 </manifest>

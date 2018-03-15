@@ -13,6 +13,8 @@ import com.design.material.materialdesign.flycotablayout.FlycoBean;
 import com.design.material.materialdesign.flycotablayout.acticity.CommonTabActivity;
 import com.design.material.materialdesign.flycotablayout.acticity.SegmentTabActivity;
 import com.design.material.materialdesign.flycotablayout.acticity.SlidingTabActivity;
+import com.design.material.materialdesign.guideview.GuideViewActivity;
+import com.design.material.materialdesign.guideview.GuideViewBean;
 import com.design.material.materialdesign.pdfview.PDFViewActivity;
 import com.design.material.materialdesign.pdfview.PdfViewBean;
 import com.design.material.materialdesign.richtext.RichTextActivity;
@@ -70,8 +72,12 @@ public class MaterialDesign extends BaseActivity {
         mDatas.add(pdfViewBean);
 
         RichTextBean richTextBean = new RichTextBean();
-        richTextBean.setName("richText-加载HTML");
+        richTextBean.setName("richText-丰富文本解析");
         mDatas.add(richTextBean);
+
+        GuideViewBean guideViewBean = new GuideViewBean();
+        guideViewBean.setName("GuideView-遮罩");
+        mDatas.add(guideViewBean);
 
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
@@ -97,6 +103,8 @@ public class MaterialDesign extends BaseActivity {
                     return MaterialItemViewType.PDFVIEW;
                 }else if(baseBean instanceof RichTextBean){
                     return MaterialItemViewType.RICHTEXT;
+                }else if(baseBean instanceof GuideViewBean){
+                    return MaterialItemViewType.GUIDEVIEW;
                 }
                 return 0;
             }
@@ -222,21 +230,37 @@ public class MaterialDesign extends BaseActivity {
                             }
                         });
                         break;
-                        case MaterialItemViewType.RICHTEXT:
-                            RichTextBean rtb = (RichTextBean) baseBean;
-                            layoutInflater = LayoutInflater.from(MaterialDesign.this);
-                            view = layoutInflater.inflate(R.layout.item_richtext, null);
-                            linearLayout.addView(view);
-                            mame = holder.getView(R.id.id_item_materialname);
-                            mame.setText(rtb.getName());
-                            type = holder.getView(R.id.id_item_materialtype);
-                            type.setText(String.valueOf(rtb.getItemViewType()));
-                            holder.setOnClickListener(R.id.root, new View.OnClickListener() {
-                                @Override
-                                public void onClick(View view) {
-                                    startActivity(RichTextActivity.class);
-                                }
-                            });
+                    case MaterialItemViewType.RICHTEXT:
+                        RichTextBean rtb = (RichTextBean) baseBean;
+                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+                        view = layoutInflater.inflate(R.layout.item_richtext, null);
+                        linearLayout.addView(view);
+                        mame = holder.getView(R.id.id_item_materialname);
+                        mame.setText(rtb.getName());
+                        type = holder.getView(R.id.id_item_materialtype);
+                        type.setText(String.valueOf(rtb.getItemViewType()));
+                        holder.setOnClickListener(R.id.root, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(RichTextActivity.class);
+                            }
+                        });
+                        break;
+                    case MaterialItemViewType.GUIDEVIEW:
+                        GuideViewBean gvb = (GuideViewBean) baseBean;
+                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+                        view = layoutInflater.inflate(R.layout.item_guide, null);
+                        linearLayout.addView(view);
+                        mame = holder.getView(R.id.id_item_materialname);
+                        mame.setText(gvb.getName());
+                        type = holder.getView(R.id.id_item_materialtype);
+                        type.setText(String.valueOf(gvb.getItemViewType()));
+                        holder.setOnClickListener(R.id.root, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(GuideViewActivity.class);
+                            }
+                        });
                         break;
                 }
             }
