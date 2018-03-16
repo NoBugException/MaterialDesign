@@ -33,6 +33,5 @@ dependencies {
     compile project(':android-pdf-viewer')
     compile project(':richtext')
     compile project(path: ':guideview')
-    compile project(path: ':guideview')
-    compile project(path: ':guideview')
+    compile project(path: ':showcaseviewlibrary')
 }

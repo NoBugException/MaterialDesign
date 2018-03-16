@@ -55,6 +55,24 @@
         <activity android:name=".guideview.SimpleGuideViewActivity"/>
 
         <activity android:name=".guideview.ViewActivity"/>
+
+        <activity android:name=".showcaseview.ShowCaseView"/>
+
+        <activity android:name=".showcaseview.ActionItemsSampleActivity"/>
+
+        <activity android:name=".showcaseview.FragmentDemoActivity"/>
+
+        <activity android:name=".showcaseview.EventsActivity"/>
+
+        <activity android:name=".showcaseview.SingleShotActivity"/>
+
+        <activity android:name=".showcaseview.AnimationSampleActivity"/>
+
+        <activity android:name=".showcaseview.CustomTextActivity"/>
+
+        <activity android:name=".showcaseview.CustomShowcaseActivity"/>
+
+        <activity android:name=".showcaseview.MemoryManagementTesting"/>
     </application>
 
 </manifest>

@@ -19,6 +19,8 @@ import com.design.material.materialdesign.pdfview.PDFViewActivity;
 import com.design.material.materialdesign.pdfview.PdfViewBean;
 import com.design.material.materialdesign.richtext.RichTextActivity;
 import com.design.material.materialdesign.richtext.RichTextBean;
+import com.design.material.materialdesign.showcaseview.ShowCaseBean;
+import com.design.material.materialdesign.showcaseview.ShowCaseView;
 import com.design.material.materialdesign.threeslideview.SlideBean;
 import com.design.material.materialdesign.bottomnavgationview.BottomNavigationActivity;
 import com.design.material.materialdesign.threeslideview.viewflipper.activity.ViewFlipper1Activity;
@@ -79,6 +81,10 @@ public class MaterialDesign extends BaseActivity {
         guideViewBean.setName("GuideView-遮罩");
         mDatas.add(guideViewBean);
 
+        ShowCaseBean showCaseBean = new ShowCaseBean();
+        showCaseBean.setName("ShowCaseView-遮罩-高亮突出");
+        mDatas.add(showCaseBean);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -105,6 +111,8 @@ public class MaterialDesign extends BaseActivity {
                     return MaterialItemViewType.RICHTEXT;
                 }else if(baseBean instanceof GuideViewBean){
                     return MaterialItemViewType.GUIDEVIEW;
+                }else if(baseBean instanceof ShowCaseBean){
+                    return MaterialItemViewType.SHOWCASEVIEW;
                 }
                 return 0;
             }
@@ -259,6 +267,22 @@ public class MaterialDesign extends BaseActivity {
                             @Override
                             public void onClick(View view) {
                                 startActivity(GuideViewActivity.class);
+                            }
+                        });
+                        break;
+                    case MaterialItemViewType.SHOWCASEVIEW:
+                        ShowCaseBean scb = (ShowCaseBean) baseBean;
+                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+                        view = layoutInflater.inflate(R.layout.item_showcase, null);
+                        linearLayout.addView(view);
+                        mame = holder.getView(R.id.id_item_materialname);
+                        mame.setText(scb.getName());
+                        type = holder.getView(R.id.id_item_materialtype);
+                        type.setText(String.valueOf(scb.getItemViewType()));
+                        holder.setOnClickListener(R.id.root, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(ShowCaseView.class);
                             }
                         });
                         break;

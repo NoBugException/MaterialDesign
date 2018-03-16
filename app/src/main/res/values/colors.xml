@@ -20,4 +20,6 @@
     <color name="tab_tv_selected">#8a47a3</color>
     <color name="bg_tab_border_selecter">#434470</color>
 
+    <color name="custom_showcase_bg">#b9002153</color>
+
 </resources>
