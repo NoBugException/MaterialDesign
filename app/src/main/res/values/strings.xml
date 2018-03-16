@@ -64,4 +64,7 @@
     <string name="title_events">Events</string>
     <string name="sum_event">Details ShowcaseView lifecycle events</string>
 
+    <string name="menu_action_all_down">All down</string>
+    <string name="menu_action_up_down">Up down</string>
+    <string name="menu_action_up_down_stack">Up down stack</string>
 </resources>

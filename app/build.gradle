@@ -34,4 +34,5 @@ dependencies {
     compile project(':richtext')
     compile project(path: ':guideview')
     compile project(path: ':showcaseviewlibrary')
+    compile project(':cardstack')
 }

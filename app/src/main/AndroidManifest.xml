@@ -73,6 +73,8 @@
         <activity android:name=".showcaseview.CustomShowcaseActivity"/>
 
         <activity android:name=".showcaseview.MemoryManagementTesting"/>
+
+        <activity android:name=".cardstackview.CardStackViewActivity"/>
     </application>
 
 </manifest>

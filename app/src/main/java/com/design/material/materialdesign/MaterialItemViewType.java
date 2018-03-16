@@ -20,6 +20,8 @@ public class MaterialItemViewType {
     public static final int GUIDEVIEW = 6;
     //高亮-指引
     public static final int SHOWCASEVIEW = 7;
+    //CardStackView
+    public static final int CARDSTACKVIEW = 8;
 
 
 }

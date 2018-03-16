@@ -9,6 +9,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.design.material.materialdesign.bottomnavgationview.BottomNavigationBean;
+import com.design.material.materialdesign.cardstackview.CardStackBean;
+import com.design.material.materialdesign.cardstackview.CardStackViewActivity;
 import com.design.material.materialdesign.flycotablayout.FlycoBean;
 import com.design.material.materialdesign.flycotablayout.acticity.CommonTabActivity;
 import com.design.material.materialdesign.flycotablayout.acticity.SegmentTabActivity;
@@ -85,6 +87,10 @@ public class MaterialDesign extends BaseActivity {
         showCaseBean.setName("ShowCaseView-遮罩-高亮突出");
         mDatas.add(showCaseBean);
 
+        CardStackBean cardStackBean = new CardStackBean();
+        cardStackBean.setName("CardStackView");
+        mDatas.add(cardStackBean);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -113,6 +119,8 @@ public class MaterialDesign extends BaseActivity {
                     return MaterialItemViewType.GUIDEVIEW;
                 }else if(baseBean instanceof ShowCaseBean){
                     return MaterialItemViewType.SHOWCASEVIEW;
+                }else if(baseBean instanceof CardStackBean){
+                    return MaterialItemViewType.CARDSTACKVIEW;
                 }
                 return 0;
             }
@@ -283,6 +291,22 @@ public class MaterialDesign extends BaseActivity {
                             @Override
                             public void onClick(View view) {
                                 startActivity(ShowCaseView.class);
+                            }
+                        });
+                        break;
+                    case MaterialItemViewType.CARDSTACKVIEW:
+                        CardStackBean csb = (CardStackBean) baseBean;
+                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+                        view = layoutInflater.inflate(R.layout.item_showcase, null);
+                        linearLayout.addView(view);
+                        mame = holder.getView(R.id.id_item_materialname);
+                        mame.setText(csb.getName());
+                        type = holder.getView(R.id.id_item_materialtype);
+                        type.setText(String.valueOf(csb.getItemViewType()));
+                        holder.setOnClickListener(R.id.root, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(CardStackViewActivity.class);
                             }
                         });
                         break;
