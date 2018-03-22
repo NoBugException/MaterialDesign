@@ -24,6 +24,7 @@ public class MaterialItemViewType {
     public static final int CARDSTACKVIEW = 8;
     //LiquidButton-一个实现液体填充效果的加载提示view
     public static final int LIQUIDB = 9;
-
+    //模仿探探的卡片左右滑动效果
+    public static final int CARDSLIDE = 10;
 
 }

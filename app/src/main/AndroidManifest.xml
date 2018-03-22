@@ -77,6 +77,8 @@
         <activity android:name=".cardstackview.CardStackViewActivity"/>
 
         <activity android:name=".liquidbutton.LiquidButtonActivity"/>
+
+        <activity android:name=".cardslide.CardSlideActivity"/>
     </application>
 
 </manifest>

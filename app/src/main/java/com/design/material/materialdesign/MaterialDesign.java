@@ -9,6 +9,8 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.design.material.materialdesign.bottomnavgationview.BottomNavigationBean;
+import com.design.material.materialdesign.cardslide.CardSlideActivity;
+import com.design.material.materialdesign.cardslide.CardSlideBean;
 import com.design.material.materialdesign.cardstackview.CardStackBean;
 import com.design.material.materialdesign.cardstackview.CardStackViewActivity;
 import com.design.material.materialdesign.flycotablayout.FlycoBean;
@@ -97,6 +99,10 @@ public class MaterialDesign extends BaseActivity {
         liquidBean.setName("LiquidButton-一个实现液体填充效果的加载提示view");
         mDatas.add(liquidBean);
 
+        CardSlideBean cardSlideBean = new CardSlideBean();
+        cardSlideBean.setName("模仿探探的卡片左右滑动效果");
+        mDatas.add(cardSlideBean);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -129,6 +135,8 @@ public class MaterialDesign extends BaseActivity {
                     return MaterialItemViewType.CARDSTACKVIEW;
                 }else if(baseBean instanceof LiquidBean){
                     return MaterialItemViewType.LIQUIDB;
+                }else if(baseBean instanceof CardSlideBean){
+                    return MaterialItemViewType.CARDSLIDE;
                 }
                 return 0;
             }
@@ -331,6 +339,22 @@ public class MaterialDesign extends BaseActivity {
                             @Override
                             public void onClick(View view) {
                                 startActivity(LiquidButtonActivity.class);
+                            }
+                        });
+                        break;
+                    case MaterialItemViewType.CARDSLIDE:
+                        CardSlideBean csbn = (CardSlideBean) baseBean;
+                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+                        view = layoutInflater.inflate(R.layout.item_cardslide, null);
+                        linearLayout.addView(view);
+                        mame = holder.getView(R.id.id_item_materialname);
+                        mame.setText(csbn.getName());
+                        type = holder.getView(R.id.id_item_materialtype);
+                        type.setText(String.valueOf(csbn.getItemViewType()));
+                        holder.setOnClickListener(R.id.root, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(CardSlideActivity.class);
                             }
                         });
                         break;
