@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/cardstack/cardstack.iml" filepath="$PROJECT_DIR$/cardstack/cardstack.iml" />
       <module fileurl="file://$PROJECT_DIR$/circleindicator/circleindicator.iml" filepath="$PROJECT_DIR$/circleindicator/circleindicator.iml" />
       <module fileurl="file://$PROJECT_DIR$/guideview/guideview.iml" filepath="$PROJECT_DIR$/guideview/guideview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/liquidButtonLib/liquidButtonLib.iml" filepath="$PROJECT_DIR$/liquidButtonLib/liquidButtonLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/richtext/richtext.iml" filepath="$PROJECT_DIR$/richtext/richtext.iml" />
       <module fileurl="file://$PROJECT_DIR$/showcaseviewlibrary/showcaseviewlibrary.iml" filepath="$PROJECT_DIR$/showcaseviewlibrary/showcaseviewlibrary.iml" />
     </modules>

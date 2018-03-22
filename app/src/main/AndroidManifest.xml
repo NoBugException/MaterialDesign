@@ -75,6 +75,8 @@
         <activity android:name=".showcaseview.MemoryManagementTesting"/>
 
         <activity android:name=".cardstackview.CardStackViewActivity"/>
+
+        <activity android:name=".liquidbutton.LiquidButtonActivity"/>
     </application>
 
 </manifest>

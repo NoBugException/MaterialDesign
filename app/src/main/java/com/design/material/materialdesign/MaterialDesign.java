@@ -17,6 +17,8 @@ import com.design.material.materialdesign.flycotablayout.acticity.SegmentTabActi
 import com.design.material.materialdesign.flycotablayout.acticity.SlidingTabActivity;
 import com.design.material.materialdesign.guideview.GuideViewActivity;
 import com.design.material.materialdesign.guideview.GuideViewBean;
+import com.design.material.materialdesign.liquidbutton.LiquidBean;
+import com.design.material.materialdesign.liquidbutton.LiquidButtonActivity;
 import com.design.material.materialdesign.pdfview.PDFViewActivity;
 import com.design.material.materialdesign.pdfview.PdfViewBean;
 import com.design.material.materialdesign.richtext.RichTextActivity;
@@ -91,6 +93,10 @@ public class MaterialDesign extends BaseActivity {
         cardStackBean.setName("CardStackView");
         mDatas.add(cardStackBean);
 
+        LiquidBean liquidBean = new LiquidBean();
+        liquidBean.setName("LiquidButton-一个实现液体填充效果的加载提示view");
+        mDatas.add(liquidBean);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -121,6 +127,8 @@ public class MaterialDesign extends BaseActivity {
                     return MaterialItemViewType.SHOWCASEVIEW;
                 }else if(baseBean instanceof CardStackBean){
                     return MaterialItemViewType.CARDSTACKVIEW;
+                }else if(baseBean instanceof LiquidBean){
+                    return MaterialItemViewType.LIQUIDB;
                 }
                 return 0;
             }
@@ -307,6 +315,22 @@ public class MaterialDesign extends BaseActivity {
                             @Override
                             public void onClick(View view) {
                                 startActivity(CardStackViewActivity.class);
+                            }
+                        });
+                        break;
+                    case MaterialItemViewType.LIQUIDB:
+                        LiquidBean lb = (LiquidBean) baseBean;
+                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+                        view = layoutInflater.inflate(R.layout.item_liquidbutton, null);
+                        linearLayout.addView(view);
+                        mame = holder.getView(R.id.id_item_materialname);
+                        mame.setText(lb.getName());
+                        type = holder.getView(R.id.id_item_materialtype);
+                        type.setText(String.valueOf(lb.getItemViewType()));
+                        holder.setOnClickListener(R.id.root, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(LiquidButtonActivity.class);
                             }
                         });
                         break;
