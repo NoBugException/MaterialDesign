@@ -26,5 +26,7 @@ public class MaterialItemViewType {
     public static final int LIQUIDB = 9;
     //模仿探探的卡片左右滑动效果
     public static final int CARDSLIDE = 10;
+    //一个比较常规的卡片式交互控件
+    public static final int EXPANDINGPAGER = 11;
 
 }

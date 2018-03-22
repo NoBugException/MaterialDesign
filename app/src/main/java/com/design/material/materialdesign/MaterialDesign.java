@@ -13,6 +13,8 @@ import com.design.material.materialdesign.cardslide.CardSlideActivity;
 import com.design.material.materialdesign.cardslide.CardSlideBean;
 import com.design.material.materialdesign.cardstackview.CardStackBean;
 import com.design.material.materialdesign.cardstackview.CardStackViewActivity;
+import com.design.material.materialdesign.expandingpager.ExpandingPagerBean;
+import com.design.material.materialdesign.expandingpager.ExpandingpagerActivity;
 import com.design.material.materialdesign.flycotablayout.FlycoBean;
 import com.design.material.materialdesign.flycotablayout.acticity.CommonTabActivity;
 import com.design.material.materialdesign.flycotablayout.acticity.SegmentTabActivity;
@@ -103,6 +105,10 @@ public class MaterialDesign extends BaseActivity {
         cardSlideBean.setName("模仿探探的卡片左右滑动效果");
         mDatas.add(cardSlideBean);
 
+        ExpandingPagerBean expandingPagerBean = new ExpandingPagerBean();
+        expandingPagerBean.setName("一个比较常规的卡片式交互控件");
+        mDatas.add(expandingPagerBean);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -137,6 +143,8 @@ public class MaterialDesign extends BaseActivity {
                     return MaterialItemViewType.LIQUIDB;
                 }else if(baseBean instanceof CardSlideBean){
                     return MaterialItemViewType.CARDSLIDE;
+                }else  if(baseBean instanceof ExpandingPagerBean){
+                    return MaterialItemViewType.EXPANDINGPAGER;
                 }
                 return 0;
             }
@@ -355,6 +363,22 @@ public class MaterialDesign extends BaseActivity {
                             @Override
                             public void onClick(View view) {
                                 startActivity(CardSlideActivity.class);
+                            }
+                        });
+                        break;
+                    case MaterialItemViewType.EXPANDINGPAGER:
+                        ExpandingPagerBean epb = (ExpandingPagerBean) baseBean;
+                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+                        view = layoutInflater.inflate(R.layout.item_expandingpager, null);
+                        linearLayout.addView(view);
+                        mame = holder.getView(R.id.id_item_materialname);
+                        mame.setText(epb.getName());
+                        type = holder.getView(R.id.id_item_materialtype);
+                        type.setText(String.valueOf(epb.getItemViewType()));
+                        holder.setOnClickListener(R.id.root, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(ExpandingpagerActivity.class);
                             }
                         });
                         break;

@@ -8,11 +8,11 @@
         "source": "E:\\MaterialDesign\\android-pdf-viewer\\build\\intermediates\\bundles\\debug\\res\\drawable\\default_scroll_handle_right.xml"
     },
     {
-        "merged": "E:\\MaterialDesign\\android-pdf-viewer\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\default_scroll_handle_top.xml",
-        "source": "E:\\MaterialDesign\\android-pdf-viewer\\build\\intermediates\\bundles\\debug\\res\\drawable\\default_scroll_handle_top.xml"
-    },
-    {
         "merged": "E:\\MaterialDesign\\android-pdf-viewer\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\default_scroll_handle_bottom.xml",
         "source": "E:\\MaterialDesign\\android-pdf-viewer\\build\\intermediates\\bundles\\debug\\res\\drawable\\default_scroll_handle_bottom.xml"
+    },
+    {
+        "merged": "E:\\MaterialDesign\\android-pdf-viewer\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\default_scroll_handle_top.xml",
+        "source": "E:\\MaterialDesign\\android-pdf-viewer\\build\\intermediates\\bundles\\debug\\res\\drawable\\default_scroll_handle_top.xml"
     }
 ]

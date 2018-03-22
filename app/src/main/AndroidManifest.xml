@@ -79,6 +79,10 @@
         <activity android:name=".liquidbutton.LiquidButtonActivity"/>
 
         <activity android:name=".cardslide.CardSlideActivity"/>
+
+        <activity android:name=".expandingpager.ExpandingpagerActivity"/>
+
+        <activity android:name=".expandingpager.InfoActivity"/>
     </application>
 
 </manifest>
