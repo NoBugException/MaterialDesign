@@ -23,6 +23,8 @@ import com.design.material.materialdesign.guideview.GuideViewActivity;
 import com.design.material.materialdesign.guideview.GuideViewBean;
 import com.design.material.materialdesign.liquidbutton.LiquidBean;
 import com.design.material.materialdesign.liquidbutton.LiquidButtonActivity;
+import com.design.material.materialdesign.loading.LoadingActivity;
+import com.design.material.materialdesign.loading.LoadingBean;
 import com.design.material.materialdesign.pdfview.PDFViewActivity;
 import com.design.material.materialdesign.pdfview.PdfViewBean;
 import com.design.material.materialdesign.richtext.RichTextActivity;
@@ -109,6 +111,11 @@ public class MaterialDesign extends BaseActivity {
         expandingPagerBean.setName("一个比较常规的卡片式交互控件");
         mDatas.add(expandingPagerBean);
 
+        LoadingBean loadingBean = new LoadingBean();
+        loadingBean.setName("加载动画");
+        mDatas.add(loadingBean);
+
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -145,6 +152,8 @@ public class MaterialDesign extends BaseActivity {
                     return MaterialItemViewType.CARDSLIDE;
                 }else  if(baseBean instanceof ExpandingPagerBean){
                     return MaterialItemViewType.EXPANDINGPAGER;
+                }else if(baseBean instanceof LoadingBean){
+                    return MaterialItemViewType.LOADINGVIEW;
                 }
                 return 0;
             }
@@ -379,6 +388,22 @@ public class MaterialDesign extends BaseActivity {
                             @Override
                             public void onClick(View view) {
                                 startActivity(ExpandingpagerActivity.class);
+                            }
+                        });
+                        break;
+                    case MaterialItemViewType.LOADINGVIEW:
+                        LoadingBean lbn = (LoadingBean) baseBean;
+                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+                        view = layoutInflater.inflate(R.layout.item_loading, null);
+                        linearLayout.addView(view);
+                        mame = holder.getView(R.id.id_item_materialname);
+                        mame.setText(lbn.getName());
+                        type = holder.getView(R.id.id_item_materialtype);
+                        type.setText(String.valueOf(lbn.getItemViewType()));
+                        holder.setOnClickListener(R.id.root, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(LoadingActivity.class);
                             }
                         });
                         break;

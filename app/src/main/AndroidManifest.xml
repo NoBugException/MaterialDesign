@@ -83,6 +83,10 @@
         <activity android:name=".expandingpager.ExpandingpagerActivity"/>
 
         <activity android:name=".expandingpager.InfoActivity"/>
+
+        <activity android:name=".loading.DetailActivity"/>
+
+        <activity android:name=".loading.LoadingActivity"/>
     </application>
 
 </manifest>

@@ -28,5 +28,7 @@ public class MaterialItemViewType {
     public static final int CARDSLIDE = 10;
     //一个比较常规的卡片式交互控件
     public static final int EXPANDINGPAGER = 11;
+    //Loadingview
+    public static final int LOADINGVIEW = 12;
 
 }
