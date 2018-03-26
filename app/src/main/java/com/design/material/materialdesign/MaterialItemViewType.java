@@ -30,5 +30,7 @@ public class MaterialItemViewType {
     public static final int EXPANDINGPAGER = 11;
     //Loadingview
     public static final int LOADINGVIEW = 12;
+    //LoadDrawable
+    public static final int LOADDRAWABLE = 13;
 
 }

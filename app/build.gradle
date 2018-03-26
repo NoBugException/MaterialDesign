@@ -37,6 +37,7 @@ dependencies {
     compile project(':cardstack')
     compile project(':cardslidelib')
     compile project(':loadinglib')
+    compile project(':loaddrawablelib')
     compile project(':expandingpagerlib')
     compile 'com.jakewharton:butterknife:7.0.1'
     compile project(path: ':liquidButtonLib')

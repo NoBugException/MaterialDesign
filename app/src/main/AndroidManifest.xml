@@ -87,6 +87,20 @@
         <activity android:name=".loading.DetailActivity"/>
 
         <activity android:name=".loading.LoadingActivity"/>
+
+        <activity android:name=".loaddrawable.AnimalActivity"/>
+
+        <activity android:name=".loaddrawable.CircleJumpActivity"/>
+
+        <activity android:name=".loaddrawable.GoodsActivity"/>
+
+        <activity android:name=".loaddrawable.LoadDrawableActivity"/>
+
+        <activity android:name=".loaddrawable.SceneryActivity"/>
+
+        <activity android:name=".loaddrawable.ShapeChangeActivity"/>
+
+        <activity android:name=".loaddrawable.CircleRotateActivity"/>
     </application>
 
 </manifest>
