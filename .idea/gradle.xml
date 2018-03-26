@@ -16,7 +16,9 @@
             <option value="$PROJECT_DIR$/expandingpagerlib" />
             <option value="$PROJECT_DIR$/guideview" />
             <option value="$PROJECT_DIR$/liquidButtonLib" />
+            <option value="$PROJECT_DIR$/loaddrawablelib" />
             <option value="$PROJECT_DIR$/loadinglib" />
+            <option value="$PROJECT_DIR$/loadingviewlib" />
             <option value="$PROJECT_DIR$/richtext" />
             <option value="$PROJECT_DIR$/showcaseviewlibrary" />
           </set>

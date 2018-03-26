@@ -101,6 +101,8 @@
         <activity android:name=".loaddrawable.ShapeChangeActivity"/>
 
         <activity android:name=".loaddrawable.CircleRotateActivity"/>
+
+        <activity android:name=".loadview.LoadViewActivity"/>
     </application>
 
 </manifest>

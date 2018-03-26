@@ -27,6 +27,8 @@ import com.design.material.materialdesign.loaddrawable.LoadDrawableActivity;
 import com.design.material.materialdesign.loaddrawable.LoadDrawableBean;
 import com.design.material.materialdesign.loading.LoadingActivity;
 import com.design.material.materialdesign.loading.LoadingBean;
+import com.design.material.materialdesign.loadview.LoadViewActivity;
+import com.design.material.materialdesign.loadview.LoadViewBean;
 import com.design.material.materialdesign.pdfview.PDFViewActivity;
 import com.design.material.materialdesign.pdfview.PdfViewBean;
 import com.design.material.materialdesign.richtext.RichTextActivity;
@@ -121,6 +123,9 @@ public class MaterialDesign extends BaseActivity {
         loadDrawableBean.setName("加载动画-LoadDrawable");
         mDatas.add(loadDrawableBean);
 
+        LoadViewBean loadViewBean = new LoadViewBean();
+        loadViewBean.setName("加载动画-Loadview");
+        mDatas.add(loadViewBean);
 
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
@@ -162,6 +167,8 @@ public class MaterialDesign extends BaseActivity {
                     return MaterialItemViewType.LOADINGVIEW;
                 }else if(baseBean instanceof LoadDrawableBean){
                     return MaterialItemViewType.LOADDRAWABLE;
+                }else if(baseBean instanceof LoadViewBean){
+                    return MaterialItemViewType.LOADVIEW;
                 }
                 return 0;
             }
@@ -428,6 +435,22 @@ public class MaterialDesign extends BaseActivity {
                             @Override
                             public void onClick(View view) {
                                 startActivity(LoadDrawableActivity.class);
+                            }
+                        });
+                        break;
+                    case MaterialItemViewType.LOADVIEW:
+                        LoadViewBean lvb = (LoadViewBean) baseBean;
+                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+                        view = layoutInflater.inflate(R.layout.item_loading, null);
+                        linearLayout.addView(view);
+                        mame = holder.getView(R.id.id_item_materialname);
+                        mame.setText(lvb.getName());
+                        type = holder.getView(R.id.id_item_materialtype);
+                        type.setText(String.valueOf(lvb.getItemViewType()));
+                        holder.setOnClickListener(R.id.root, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(LoadViewActivity.class);
                             }
                         });
                         break;
