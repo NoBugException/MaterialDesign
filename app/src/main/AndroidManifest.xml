@@ -103,6 +103,8 @@
         <activity android:name=".loaddrawable.CircleRotateActivity"/>
 
         <activity android:name=".loadview.LoadViewActivity"/>
+
+        <activity android:name=".mateballloading.MateBallLoadingActivity"/>
     </application>
 
 </manifest>

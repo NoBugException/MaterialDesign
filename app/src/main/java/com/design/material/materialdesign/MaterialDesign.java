@@ -29,6 +29,8 @@ import com.design.material.materialdesign.loading.LoadingActivity;
 import com.design.material.materialdesign.loading.LoadingBean;
 import com.design.material.materialdesign.loadview.LoadViewActivity;
 import com.design.material.materialdesign.loadview.LoadViewBean;
+import com.design.material.materialdesign.mateballloading.MateBallLoadingActivity;
+import com.design.material.materialdesign.mateballloading.MateBallLoadingBean;
 import com.design.material.materialdesign.pdfview.PDFViewActivity;
 import com.design.material.materialdesign.pdfview.PdfViewBean;
 import com.design.material.materialdesign.richtext.RichTextActivity;
@@ -127,6 +129,10 @@ public class MaterialDesign extends BaseActivity {
         loadViewBean.setName("加载动画-Loadview");
         mDatas.add(loadViewBean);
 
+        MateBallLoadingBean mateBallLoadingBean = new MateBallLoadingBean();
+        mateBallLoadingBean.setName("一个有贝塞尔曲线动画的加载提示框");
+        mDatas.add(mateBallLoadingBean);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -169,6 +175,8 @@ public class MaterialDesign extends BaseActivity {
                     return MaterialItemViewType.LOADDRAWABLE;
                 }else if(baseBean instanceof LoadViewBean){
                     return MaterialItemViewType.LOADVIEW;
+                }else if(baseBean instanceof MateBallLoadingBean){
+                    return MaterialItemViewType.MATEBALLLOADING;
                 }
                 return 0;
             }
@@ -451,6 +459,22 @@ public class MaterialDesign extends BaseActivity {
                             @Override
                             public void onClick(View view) {
                                 startActivity(LoadViewActivity.class);
+                            }
+                        });
+                        break;
+                    case MaterialItemViewType.MATEBALLLOADING:
+                        MateBallLoadingBean mblb = (MateBallLoadingBean) baseBean;
+                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+                        view = layoutInflater.inflate(R.layout.item_loading, null);
+                        linearLayout.addView(view);
+                        mame = holder.getView(R.id.id_item_materialname);
+                        mame.setText(mblb.getName());
+                        type = holder.getView(R.id.id_item_materialtype);
+                        type.setText(String.valueOf(mblb.getItemViewType()));
+                        holder.setOnClickListener(R.id.root, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(MateBallLoadingActivity.class);
                             }
                         });
                         break;
