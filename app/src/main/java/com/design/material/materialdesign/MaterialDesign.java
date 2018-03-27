@@ -23,6 +23,7 @@ import com.design.material.materialdesign.guideview.GuideViewActivity;
 import com.design.material.materialdesign.guideview.GuideViewBean;
 import com.design.material.materialdesign.indicatorstepview.IndicatorStepViewActivity;
 import com.design.material.materialdesign.indicatorstepview.StepViewBean;
+import com.design.material.materialdesign.indicatorstepview2.IndicatorStepView2Activity;
 import com.design.material.materialdesign.liquidbutton.LiquidBean;
 import com.design.material.materialdesign.liquidbutton.LiquidButtonActivity;
 import com.design.material.materialdesign.loaddrawable.LoadDrawableActivity;
@@ -141,9 +142,15 @@ public class MaterialDesign extends BaseActivity {
         multiDialogBean.setName("多种对话框展示");
         mDatas.add(multiDialogBean);
 
-        StepViewBean stepViewBean = new StepViewBean();
-        stepViewBean.setName("指示器-StepView");
-        mDatas.add(stepViewBean);
+        StepViewBean stepViewBean1 = new StepViewBean();
+        stepViewBean1.setFlag(1);
+        stepViewBean1.setName("指示器-StepView1");
+        mDatas.add(stepViewBean1);
+
+        StepViewBean stepViewBean2 = new StepViewBean();
+        stepViewBean2.setFlag(2);
+        stepViewBean2.setName("指示器-StepView2");
+        mDatas.add(stepViewBean2);
 
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
@@ -511,7 +518,7 @@ public class MaterialDesign extends BaseActivity {
                         });
                         break;
                     case MaterialItemViewType.STEPVIEW:
-                        StepViewBean svb = (StepViewBean) baseBean;
+                        final StepViewBean svb = (StepViewBean) baseBean;
                         layoutInflater = LayoutInflater.from(MaterialDesign.this);
                         view = layoutInflater.inflate(R.layout.item_base, null);
                         linearLayout.addView(view);
@@ -522,7 +529,11 @@ public class MaterialDesign extends BaseActivity {
                         holder.setOnClickListener(R.id.root, new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                startActivity(IndicatorStepViewActivity.class);
+                                if(svb.getFlag() == 1){
+                                    startActivity(IndicatorStepViewActivity.class);
+                                }else if(svb.getFlag() == 2){
+                                    startActivity(IndicatorStepView2Activity.class);
+                                }
                             }
                         });
                         break;

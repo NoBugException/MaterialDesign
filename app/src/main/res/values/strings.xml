@@ -267,4 +267,12 @@
     <string name="list_longPress">Basic List (Long Press)</string>
     <string name="add_item">Add Item</string>
     <string name="multiChoiceLimitedMin">Multi Choice (Min Selections)</string>
+
+    <string-array name="stepLabels">
+        <item>Approval</item>
+        <item>Processed</item>
+        <item>Shipped</item>
+        <item>Delivery</item>
+    </string-array>
+
 </resources>

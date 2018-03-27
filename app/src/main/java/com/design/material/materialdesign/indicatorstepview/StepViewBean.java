@@ -8,8 +8,19 @@ import com.design.material.materialdesign.MaterialItemViewType;
  */
 
 public class StepViewBean extends BaseBean {
+
+    private int flag;
+
     @Override
     public int getItemViewType() {
         return MaterialItemViewType.STEPVIEW;
+    }
+
+    public int getFlag() {
+        return flag;
+    }
+
+    public void setFlag(int flag) {
+        this.flag = flag;
     }
 }

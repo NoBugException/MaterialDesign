@@ -113,6 +113,8 @@
         <activity android:name=".indicatorstepview.IndicatorStepViewActivity"/>
 
         <activity android:name=".indicatorstepview.TestHorizontalStepViewActivity"/>
+
+        <activity android:name=".indicatorstepview2.IndicatorStepView2Activity"/>
     </application>
 
 </manifest>
