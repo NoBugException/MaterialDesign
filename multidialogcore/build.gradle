@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'com.novoda.bintray-release'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 1
+        versionName 'aa'
+        consumerProguardFiles 'progress-proguard.txt'
+    }
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+    sourceSets {
+        main.res.srcDirs = [
+            'src/main/res',
+            'src/main/res-public'
+        ]
+    }
+}
+
+dependencies {
+    compile 'com.google.code.findbugs:jsr305:3.0.2'
+    compile 'me.zhanghai.android.materialprogressbar:library:1.4.0'
+    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+    compile 'com.android.support:support-annotations:26.0.0-alpha1'
+}
+
+//publish {
+//    userOrg = 'novoda'
+//    groupId = 'com.afollestad.material-dialogs'
+//    artifactId = 'core'
+//    publishVersion = versions.publishVersion
+//    website = 'https://github.com/afollestad/material-dialogs'
+//}

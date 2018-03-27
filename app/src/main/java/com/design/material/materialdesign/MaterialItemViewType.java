@@ -36,5 +36,7 @@ public class MaterialItemViewType {
     public static final int LOADVIEW = 14;
     //一个有贝塞尔曲线动画的加载提示框
     public static final int MATEBALLLOADING = 15;
+    //多种对话框
+    public static final int MULTIDIALOG = 16;
 
 }

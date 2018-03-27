@@ -105,6 +105,10 @@
         <activity android:name=".loadview.LoadViewActivity"/>
 
         <activity android:name=".mateballloading.MateBallLoadingActivity"/>
+
+        <activity android:name=".multidialog.MultiDialogActivity"/>
+
+        <activity android:name=".multidialog.PreferenceActivity"/>
     </application>
 
 </manifest>

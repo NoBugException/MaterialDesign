@@ -19,6 +19,8 @@
             <option value="$PROJECT_DIR$/loaddrawablelib" />
             <option value="$PROJECT_DIR$/loadinglib" />
             <option value="$PROJECT_DIR$/loadingviewlib" />
+            <option value="$PROJECT_DIR$/multidialogcommons" />
+            <option value="$PROJECT_DIR$/multidialogcore" />
             <option value="$PROJECT_DIR$/richtext" />
             <option value="$PROJECT_DIR$/showcaseviewlibrary" />
           </set>

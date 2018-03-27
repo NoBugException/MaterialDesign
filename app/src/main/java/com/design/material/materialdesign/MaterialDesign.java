@@ -31,6 +31,8 @@ import com.design.material.materialdesign.loadview.LoadViewActivity;
 import com.design.material.materialdesign.loadview.LoadViewBean;
 import com.design.material.materialdesign.mateballloading.MateBallLoadingActivity;
 import com.design.material.materialdesign.mateballloading.MateBallLoadingBean;
+import com.design.material.materialdesign.multidialog.MultiDialogActivity;
+import com.design.material.materialdesign.multidialog.MultiDialogBean;
 import com.design.material.materialdesign.pdfview.PDFViewActivity;
 import com.design.material.materialdesign.pdfview.PdfViewBean;
 import com.design.material.materialdesign.richtext.RichTextActivity;
@@ -133,6 +135,10 @@ public class MaterialDesign extends BaseActivity {
         mateBallLoadingBean.setName("一个有贝塞尔曲线动画的加载提示框");
         mDatas.add(mateBallLoadingBean);
 
+        MultiDialogBean multiDialogBean = new MultiDialogBean();
+        multiDialogBean.setName("多种对话框展示");
+        mDatas.add(multiDialogBean);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -177,6 +183,8 @@ public class MaterialDesign extends BaseActivity {
                     return MaterialItemViewType.LOADVIEW;
                 }else if(baseBean instanceof MateBallLoadingBean){
                     return MaterialItemViewType.MATEBALLLOADING;
+                }else if(baseBean instanceof MultiDialogBean){
+                    return MaterialItemViewType.MULTIDIALOG;
                 }
                 return 0;
             }
@@ -478,6 +486,23 @@ public class MaterialDesign extends BaseActivity {
                             }
                         });
                         break;
+                    case MaterialItemViewType.MULTIDIALOG:
+                        MultiDialogBean mdb = (MultiDialogBean) baseBean;
+                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+                        view = layoutInflater.inflate(R.layout.item_base, null);
+                        linearLayout.addView(view);
+                        mame = holder.getView(R.id.id_item_materialname);
+                        mame.setText(mdb.getName());
+                        type = holder.getView(R.id.id_item_materialtype);
+                        type.setText(String.valueOf(mdb.getItemViewType()));
+                        holder.setOnClickListener(R.id.root, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(MultiDialogActivity.class);
+                            }
+                        });
+                        break;
+
                 }
             }
         });
