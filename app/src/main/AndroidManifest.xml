@@ -109,6 +109,10 @@
         <activity android:name=".multidialog.MultiDialogActivity"/>
 
         <activity android:name=".multidialog.PreferenceActivity"/>
+
+        <activity android:name=".indicatorstepview.IndicatorStepViewActivity"/>
+
+        <activity android:name=".indicatorstepview.TestHorizontalStepViewActivity"/>
     </application>
 
 </manifest>

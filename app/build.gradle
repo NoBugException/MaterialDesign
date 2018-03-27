@@ -34,6 +34,7 @@ dependencies {
     compile project(':richtext')
     compile project(':multidialogcommons')
     compile project(':multidialogcore')
+    compile project(':stepview')
     compile project(path: ':guideview')
     compile project(path: ':showcaseviewlibrary')
     compile project(':cardstack')

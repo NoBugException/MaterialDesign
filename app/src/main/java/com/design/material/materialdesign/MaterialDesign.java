@@ -21,6 +21,8 @@ import com.design.material.materialdesign.flycotablayout.acticity.SegmentTabActi
 import com.design.material.materialdesign.flycotablayout.acticity.SlidingTabActivity;
 import com.design.material.materialdesign.guideview.GuideViewActivity;
 import com.design.material.materialdesign.guideview.GuideViewBean;
+import com.design.material.materialdesign.indicatorstepview.IndicatorStepViewActivity;
+import com.design.material.materialdesign.indicatorstepview.StepViewBean;
 import com.design.material.materialdesign.liquidbutton.LiquidBean;
 import com.design.material.materialdesign.liquidbutton.LiquidButtonActivity;
 import com.design.material.materialdesign.loaddrawable.LoadDrawableActivity;
@@ -139,6 +141,10 @@ public class MaterialDesign extends BaseActivity {
         multiDialogBean.setName("多种对话框展示");
         mDatas.add(multiDialogBean);
 
+        StepViewBean stepViewBean = new StepViewBean();
+        stepViewBean.setName("指示器-StepView");
+        mDatas.add(stepViewBean);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -185,6 +191,8 @@ public class MaterialDesign extends BaseActivity {
                     return MaterialItemViewType.MATEBALLLOADING;
                 }else if(baseBean instanceof MultiDialogBean){
                     return MaterialItemViewType.MULTIDIALOG;
+                }else if(baseBean instanceof StepViewBean){
+                    return MaterialItemViewType.STEPVIEW;
                 }
                 return 0;
             }
@@ -499,6 +507,22 @@ public class MaterialDesign extends BaseActivity {
                             @Override
                             public void onClick(View view) {
                                 startActivity(MultiDialogActivity.class);
+                            }
+                        });
+                        break;
+                    case MaterialItemViewType.STEPVIEW:
+                        StepViewBean svb = (StepViewBean) baseBean;
+                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+                        view = layoutInflater.inflate(R.layout.item_base, null);
+                        linearLayout.addView(view);
+                        mame = holder.getView(R.id.id_item_materialname);
+                        mame.setText(svb.getName());
+                        type = holder.getView(R.id.id_item_materialtype);
+                        type.setText(String.valueOf(svb.getItemViewType()));
+                        holder.setOnClickListener(R.id.root, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startActivity(IndicatorStepViewActivity.class);
                             }
                         });
                         break;

@@ -18,6 +18,7 @@
       <module fileurl="file://$PROJECT_DIR$/multidialogcore/multidialogcore.iml" filepath="$PROJECT_DIR$/multidialogcore/multidialogcore.iml" />
       <module fileurl="file://$PROJECT_DIR$/richtext/richtext.iml" filepath="$PROJECT_DIR$/richtext/richtext.iml" />
       <module fileurl="file://$PROJECT_DIR$/showcaseviewlibrary/showcaseviewlibrary.iml" filepath="$PROJECT_DIR$/showcaseviewlibrary/showcaseviewlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stepview/stepview.iml" filepath="$PROJECT_DIR$/stepview/stepview.iml" />
     </modules>
   </component>
 </project>
