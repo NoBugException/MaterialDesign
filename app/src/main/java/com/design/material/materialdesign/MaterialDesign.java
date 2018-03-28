@@ -24,6 +24,7 @@ import com.design.material.materialdesign.guideview.GuideViewBean;
 import com.design.material.materialdesign.indicatorstepview.IndicatorStepViewActivity;
 import com.design.material.materialdesign.indicatorstepview.StepViewBean;
 import com.design.material.materialdesign.indicatorstepview2.IndicatorStepView2Activity;
+import com.design.material.materialdesign.indicatorstepview3.activity.IndicatorStepView3Activity;
 import com.design.material.materialdesign.liquidbutton.LiquidBean;
 import com.design.material.materialdesign.liquidbutton.LiquidButtonActivity;
 import com.design.material.materialdesign.loaddrawable.LoadDrawableActivity;
@@ -151,6 +152,11 @@ public class MaterialDesign extends BaseActivity {
         stepViewBean2.setFlag(2);
         stepViewBean2.setName("指示器-StepView2");
         mDatas.add(stepViewBean2);
+
+        StepViewBean stepViewBean3 = new StepViewBean();
+        stepViewBean3.setFlag(3);
+        stepViewBean3.setName("指示器-StepView3");
+        mDatas.add(stepViewBean3);
 
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
@@ -533,6 +539,8 @@ public class MaterialDesign extends BaseActivity {
                                     startActivity(IndicatorStepViewActivity.class);
                                 }else if(svb.getFlag() == 2){
                                     startActivity(IndicatorStepView2Activity.class);
+                                }else if(svb.getFlag() == 3){
+                                    startActivity(IndicatorStepView3Activity.class);
                                 }
                             }
                         });
