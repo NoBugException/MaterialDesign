@@ -165,8 +165,61 @@ public class MaterialDesign extends BaseActivity {
         mRecyclerView.setAdapter(new MultiItemCommonAdapter<BaseBean>(this, mDatas, new MultiItemTypeSupport<BaseBean>() {
             @Override
             public int getLayoutId(int itemType) {
-                //基本布局
-                return R.layout.item_list;
+                int layoutId = -1;
+                switch (itemType){
+                    case MaterialItemViewType.BOTTOMNAVIGATION:
+                        layoutId =  R.layout.item_bottomnavigation;
+                        break;
+                    case MaterialItemViewType.SILIDE:
+                        layoutId = R.layout.item_slide;
+                        break;
+                    case MaterialItemViewType.FLYCO:
+                        layoutId = R.layout.item_flyco;
+                        break;
+                    case MaterialItemViewType.PDFVIEW:
+                        layoutId = R.layout.item_pdfview;
+                        break;
+                    case MaterialItemViewType.RICHTEXT:
+                        layoutId = R.layout.item_richtext;
+                        break;
+                    case MaterialItemViewType.GUIDEVIEW:
+                        layoutId = R.layout.item_guide;
+                        break;
+                    case MaterialItemViewType.SHOWCASEVIEW:
+                        layoutId = R.layout.item_showcase;
+                        break;
+                    case MaterialItemViewType.CARDSTACKVIEW:
+                        layoutId = R.layout.item_base;
+                        break;
+                    case MaterialItemViewType.LIQUIDB:
+                        layoutId = R.layout.item_liquidbutton;
+                        break;
+                    case MaterialItemViewType.CARDSLIDE:
+                        layoutId = R.layout.item_cardslide;
+                        break;
+                    case MaterialItemViewType.EXPANDINGPAGER:
+                        layoutId = R.layout.item_expandingpager;
+                        break;
+                    case MaterialItemViewType.LOADINGVIEW:
+                        layoutId = R.layout.item_loading;
+                        break;
+                    case MaterialItemViewType.LOADDRAWABLE:
+                        layoutId = R.layout.item_loading;
+                        break;
+                    case MaterialItemViewType.LOADVIEW:
+                        layoutId = R.layout.item_loading;
+                        break;
+                    case MaterialItemViewType.MATEBALLLOADING:
+                        layoutId = R.layout.item_loading;
+                        break;
+                    case MaterialItemViewType.MULTIDIALOG:
+                        layoutId = R.layout.item_base;
+                        break;
+                    case MaterialItemViewType.STEPVIEW:
+                        layoutId = R.layout.item_base;
+                        break;
+                }
+                return layoutId;
             }
 
             @Override
@@ -213,22 +266,19 @@ public class MaterialDesign extends BaseActivity {
             @Override
             public void convert(CommonViewHolder holder, BaseBean baseBean) {
                 //填充
-                LinearLayout linearLayout = holder.getView(R.id.item_container);
-                LayoutInflater layoutInflater;
                 TextView type;
-                View view;
                 TextView mame;
                 switch (baseBean.getItemViewType()){
                     case MaterialItemViewType.BOTTOMNAVIGATION:
                         BottomNavigationBean bottomNavigationBean1 = (BottomNavigationBean) baseBean;
-                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
-                        view = layoutInflater.inflate(R.layout.item_bottomnavigation, null);
-                        linearLayout.addView(view);
+//                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+//                        view = layoutInflater.inflate(R.layout.item_bottomnavigation, null);
+//                        linearLayout.addView(view);
                         mame = holder.getView(R.id.id_item_materialname);
                         mame.setText(bottomNavigationBean1.getName());
                         type = holder.getView(R.id.id_item_materialtype);
                         type.setText(String.valueOf(bottomNavigationBean1.getItemViewType()));
-                        holder.setOnClickListener(R.id.item_container, new View.OnClickListener() {
+                        holder.setOnClickListener(R.id.root, new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
                                 startActivity(BottomNavigationActivity.class);
@@ -237,9 +287,9 @@ public class MaterialDesign extends BaseActivity {
                         break;
                     case MaterialItemViewType.SILIDE:
                         SlideBean slideBean = (SlideBean) baseBean;
-                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
-                        view = layoutInflater.inflate(R.layout.item_slide, null);
-                        linearLayout.addView(view);
+//                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+//                        view = layoutInflater.inflate(R.layout.item_slide, null);
+//                        linearLayout.addView(view);
                         TextView model1 = holder.getView(R.id.model1);
                         model1.setText(slideBean.getModelName1());
                         TextView model2 = holder.getView(R.id.model2);
@@ -283,9 +333,9 @@ public class MaterialDesign extends BaseActivity {
                         break;
                     case MaterialItemViewType.FLYCO:
                         FlycoBean fb = (FlycoBean) baseBean;
-                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
-                        view = layoutInflater.inflate(R.layout.item_flyco, null);
-                        linearLayout.addView(view);
+//                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+//                        view = layoutInflater.inflate(R.layout.item_flyco, null);
+//                        linearLayout.addView(view);
                         TextView flyco_model1 = holder.getView(R.id.flyco_model1);
                         flyco_model1.setText(fb.getModelName1());
                         TextView flyco_model2 = holder.getView(R.id.flyco_model2);
@@ -317,9 +367,9 @@ public class MaterialDesign extends BaseActivity {
                         break;
                     case MaterialItemViewType.PDFVIEW:
                         PdfViewBean pdfvb = (PdfViewBean) baseBean;
-                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
-                        view = layoutInflater.inflate(R.layout.item_pdfview, null);
-                        linearLayout.addView(view);
+//                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+//                        view = layoutInflater.inflate(R.layout.item_pdfview, null);
+//                        linearLayout.addView(view);
                         mame = holder.getView(R.id.id_item_materialname);
                         mame.setText(pdfvb.getName());
                         type = holder.getView(R.id.id_item_materialtype);
@@ -333,9 +383,9 @@ public class MaterialDesign extends BaseActivity {
                         break;
                     case MaterialItemViewType.RICHTEXT:
                         RichTextBean rtb = (RichTextBean) baseBean;
-                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
-                        view = layoutInflater.inflate(R.layout.item_richtext, null);
-                        linearLayout.addView(view);
+//                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+//                        view = layoutInflater.inflate(R.layout.item_richtext, null);
+//                        linearLayout.addView(view);
                         mame = holder.getView(R.id.id_item_materialname);
                         mame.setText(rtb.getName());
                         type = holder.getView(R.id.id_item_materialtype);
@@ -349,9 +399,9 @@ public class MaterialDesign extends BaseActivity {
                         break;
                     case MaterialItemViewType.GUIDEVIEW:
                         GuideViewBean gvb = (GuideViewBean) baseBean;
-                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
-                        view = layoutInflater.inflate(R.layout.item_guide, null);
-                        linearLayout.addView(view);
+//                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+//                        view = layoutInflater.inflate(R.layout.item_guide, null);
+//                        linearLayout.addView(view);
                         mame = holder.getView(R.id.id_item_materialname);
                         mame.setText(gvb.getName());
                         type = holder.getView(R.id.id_item_materialtype);
@@ -365,9 +415,9 @@ public class MaterialDesign extends BaseActivity {
                         break;
                     case MaterialItemViewType.SHOWCASEVIEW:
                         ShowCaseBean scb = (ShowCaseBean) baseBean;
-                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
-                        view = layoutInflater.inflate(R.layout.item_showcase, null);
-                        linearLayout.addView(view);
+//                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+//                        view = layoutInflater.inflate(R.layout.item_showcase, null);
+//                        linearLayout.addView(view);
                         mame = holder.getView(R.id.id_item_materialname);
                         mame.setText(scb.getName());
                         type = holder.getView(R.id.id_item_materialtype);
@@ -381,9 +431,9 @@ public class MaterialDesign extends BaseActivity {
                         break;
                     case MaterialItemViewType.CARDSTACKVIEW:
                         CardStackBean csb = (CardStackBean) baseBean;
-                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
-                        view = layoutInflater.inflate(R.layout.item_showcase, null);
-                        linearLayout.addView(view);
+//                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+//                        view = layoutInflater.inflate(R.layout.item_showcase, null);
+//                        linearLayout.addView(view);
                         mame = holder.getView(R.id.id_item_materialname);
                         mame.setText(csb.getName());
                         type = holder.getView(R.id.id_item_materialtype);
@@ -397,9 +447,9 @@ public class MaterialDesign extends BaseActivity {
                         break;
                     case MaterialItemViewType.LIQUIDB:
                         LiquidBean lb = (LiquidBean) baseBean;
-                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
-                        view = layoutInflater.inflate(R.layout.item_liquidbutton, null);
-                        linearLayout.addView(view);
+//                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+//                        view = layoutInflater.inflate(R.layout.item_liquidbutton, null);
+//                        linearLayout.addView(view);
                         mame = holder.getView(R.id.id_item_materialname);
                         mame.setText(lb.getName());
                         type = holder.getView(R.id.id_item_materialtype);
@@ -413,9 +463,9 @@ public class MaterialDesign extends BaseActivity {
                         break;
                     case MaterialItemViewType.CARDSLIDE:
                         CardSlideBean csbn = (CardSlideBean) baseBean;
-                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
-                        view = layoutInflater.inflate(R.layout.item_cardslide, null);
-                        linearLayout.addView(view);
+//                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+//                        view = layoutInflater.inflate(R.layout.item_cardslide, null);
+//                        linearLayout.addView(view);
                         mame = holder.getView(R.id.id_item_materialname);
                         mame.setText(csbn.getName());
                         type = holder.getView(R.id.id_item_materialtype);
@@ -429,9 +479,9 @@ public class MaterialDesign extends BaseActivity {
                         break;
                     case MaterialItemViewType.EXPANDINGPAGER:
                         ExpandingPagerBean epb = (ExpandingPagerBean) baseBean;
-                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
-                        view = layoutInflater.inflate(R.layout.item_expandingpager, null);
-                        linearLayout.addView(view);
+//                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+//                        view = layoutInflater.inflate(R.layout.item_expandingpager, null);
+//                        linearLayout.addView(view);
                         mame = holder.getView(R.id.id_item_materialname);
                         mame.setText(epb.getName());
                         type = holder.getView(R.id.id_item_materialtype);
@@ -445,9 +495,9 @@ public class MaterialDesign extends BaseActivity {
                         break;
                     case MaterialItemViewType.LOADINGVIEW:
                         LoadingBean lbn = (LoadingBean) baseBean;
-                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
-                        view = layoutInflater.inflate(R.layout.item_loading, null);
-                        linearLayout.addView(view);
+//                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+//                        view = layoutInflater.inflate(R.layout.item_loading, null);
+//                        linearLayout.addView(view);
                         mame = holder.getView(R.id.id_item_materialname);
                         mame.setText(lbn.getName());
                         type = holder.getView(R.id.id_item_materialtype);
@@ -461,9 +511,9 @@ public class MaterialDesign extends BaseActivity {
                         break;
                     case MaterialItemViewType.LOADDRAWABLE:
                         LoadDrawableBean ldb = (LoadDrawableBean) baseBean;
-                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
-                        view = layoutInflater.inflate(R.layout.item_loading, null);
-                        linearLayout.addView(view);
+//                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+//                        view = layoutInflater.inflate(R.layout.item_loading, null);
+//                        linearLayout.addView(view);
                         mame = holder.getView(R.id.id_item_materialname);
                         mame.setText(ldb.getName());
                         type = holder.getView(R.id.id_item_materialtype);
@@ -477,9 +527,9 @@ public class MaterialDesign extends BaseActivity {
                         break;
                     case MaterialItemViewType.LOADVIEW:
                         LoadViewBean lvb = (LoadViewBean) baseBean;
-                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
-                        view = layoutInflater.inflate(R.layout.item_loading, null);
-                        linearLayout.addView(view);
+//                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+//                        view = layoutInflater.inflate(R.layout.item_loading, null);
+//                        linearLayout.addView(view);
                         mame = holder.getView(R.id.id_item_materialname);
                         mame.setText(lvb.getName());
                         type = holder.getView(R.id.id_item_materialtype);
@@ -493,9 +543,9 @@ public class MaterialDesign extends BaseActivity {
                         break;
                     case MaterialItemViewType.MATEBALLLOADING:
                         MateBallLoadingBean mblb = (MateBallLoadingBean) baseBean;
-                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
-                        view = layoutInflater.inflate(R.layout.item_loading, null);
-                        linearLayout.addView(view);
+//                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+//                        view = layoutInflater.inflate(R.layout.item_loading, null);
+//                        linearLayout.addView(view);
                         mame = holder.getView(R.id.id_item_materialname);
                         mame.setText(mblb.getName());
                         type = holder.getView(R.id.id_item_materialtype);
@@ -509,9 +559,9 @@ public class MaterialDesign extends BaseActivity {
                         break;
                     case MaterialItemViewType.MULTIDIALOG:
                         MultiDialogBean mdb = (MultiDialogBean) baseBean;
-                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
-                        view = layoutInflater.inflate(R.layout.item_base, null);
-                        linearLayout.addView(view);
+//                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+//                        view = layoutInflater.inflate(R.layout.item_base, null);
+//                        linearLayout.addView(view);
                         mame = holder.getView(R.id.id_item_materialname);
                         mame.setText(mdb.getName());
                         type = holder.getView(R.id.id_item_materialtype);
@@ -525,9 +575,9 @@ public class MaterialDesign extends BaseActivity {
                         break;
                     case MaterialItemViewType.STEPVIEW:
                         final StepViewBean svb = (StepViewBean) baseBean;
-                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
-                        view = layoutInflater.inflate(R.layout.item_base, null);
-                        linearLayout.addView(view);
+//                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
+//                        view = layoutInflater.inflate(R.layout.item_base, null);
+//                        linearLayout.addView(view);
                         mame = holder.getView(R.id.id_item_materialname);
                         mame.setText(svb.getName());
                         type = holder.getView(R.id.id_item_materialtype);
