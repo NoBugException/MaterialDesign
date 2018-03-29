@@ -1,25 +1,29 @@
 package com.design.material.materialdesign.guideview;
 
-import android.app.Activity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
 import com.blog.www.guideview.Component;
 import com.blog.www.guideview.Guide;
 import com.blog.www.guideview.GuideBuilder;
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 
-public class SimpleGuideViewActivity extends Activity {
+public class SimpleGuideViewActivity extends BaseActivity {
 
     private Button header_imgbtn;
     private LinearLayout ll_nearby;
     Guide guide;
 
-    @Override protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_simple_guide_view);
+    @Override
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_simple_guide_view, null);
+    }
+
+    @Override
+    protected void initView() {
         header_imgbtn = (Button) findViewById(R.id.header_imgbtn);
         header_imgbtn.setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View view) {
@@ -32,6 +36,16 @@ public class SimpleGuideViewActivity extends Activity {
                 showGuideView();
             }
         });
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
     public void showGuideView() {

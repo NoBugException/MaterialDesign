@@ -1,7 +1,5 @@
 package com.dk.view.drop;
 
-import java.lang.reflect.Field;
-
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -9,12 +7,10 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.PixelFormat;
 import android.graphics.PorterDuff;
-import android.view.MotionEvent;
-import android.view.SurfaceView;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.FrameLayout;
+
+import java.lang.reflect.Field;
 
 public class CoverManager {
     private static final int EXPLOSION_SIZE = 200;

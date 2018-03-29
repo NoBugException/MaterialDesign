@@ -1,7 +1,5 @@
 package com.dk.view.drop;
 
-import com.dk.view.drop.CoverManager.OnDragCompeteListener;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -14,6 +12,8 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+
+import com.dk.view.drop.CoverManager.OnDragCompeteListener;
 
 public class WaterDrop extends RelativeLayout {
     private Paint mPaint = new Paint();

@@ -12,8 +12,8 @@ public class StartActivity extends BaseActivity{
     private Button button;
 
     @Override
-    protected int getRootView() {
-        return R.layout.activity_base;
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_base, null);
     }
 
     @Override

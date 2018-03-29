@@ -14,23 +14,36 @@ package com.design.material.materialdesign.showcaseview;/*
  * limitations under the License.
  */
 
-import android.app.Activity;
-import android.os.Bundle;
+import android.view.View;
 
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 import com.github.amlcurran.showcaseview.ShowcaseView;
 import com.github.amlcurran.showcaseview.SimpleShowcaseEventListener;
 import com.github.amlcurran.showcaseview.targets.ViewTarget;
 
-public class MemoryManagementTesting extends Activity {
+public class MemoryManagementTesting extends BaseActivity {
 
     int currentShowcase = 1;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_showcaseview);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.layout_showcaseview, null);
+    }
+
+    @Override
+    protected void initView() {
         showcase();
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
     private void showcase() {

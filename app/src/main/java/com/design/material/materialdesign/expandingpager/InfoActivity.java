@@ -2,18 +2,18 @@ package com.design.material.materialdesign.expandingpager;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 import com.design.material.materialdesign.expandingpager.model.Travel;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class InfoActivity extends AppCompatActivity {
+public class InfoActivity extends BaseActivity {
 
     private static final String EXTRA_TRAVEL = "EXTRA_TRAVEL";
     @Bind(R.id.image) ImageView image;
@@ -26,9 +26,12 @@ public class InfoActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_expandinginfo);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_expandinginfo, null);
+    }
+
+    @Override
+    protected void initView() {
         ButterKnife.bind(this);
 
         Travel travel = getIntent().getParcelableExtra(EXTRA_TRAVEL);
@@ -36,5 +39,15 @@ public class InfoActivity extends AppCompatActivity {
             image.setImageResource(travel.getImage());
             title.setText(travel.getName());
         }
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 }

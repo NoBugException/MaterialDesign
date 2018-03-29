@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 import com.design.material.materialdesign.R;
 import com.design.material.materialdesign.expandingpager.InfoActivity;
 import com.design.material.materialdesign.expandingpager.model.Travel;

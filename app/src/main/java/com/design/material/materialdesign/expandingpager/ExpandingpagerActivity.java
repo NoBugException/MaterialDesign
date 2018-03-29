@@ -3,16 +3,15 @@ package com.design.material.materialdesign.expandingpager;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.os.Build;
-import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.util.Pair;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.transition.Explode;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 import com.design.material.materialdesign.expandingpager.adapter.TravelViewPagerAdapter;
 import com.design.material.materialdesign.expandingpager.model.Travel;
@@ -25,14 +24,17 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class ExpandingpagerActivity extends AppCompatActivity implements ExpandingFragment.OnExpandingClickListener{
+public class ExpandingpagerActivity extends BaseActivity implements ExpandingFragment.OnExpandingClickListener{
     @Bind(R.id.viewPager) ViewPager viewPager;
     @Bind(R.id.back)ViewGroup back;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.acticity_expandingpager);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.acticity_expandingpager, null);
+    }
+
+    @Override
+    protected void initView() {
         ButterKnife.bind(this);
         setupWindowAnimations();
 
@@ -61,6 +63,16 @@ public class ExpandingpagerActivity extends AppCompatActivity implements Expandi
 
             }
         });
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
     @Override

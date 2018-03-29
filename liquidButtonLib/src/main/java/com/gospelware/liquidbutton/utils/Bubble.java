@@ -6,7 +6,6 @@ import android.graphics.Paint;
 import android.graphics.PointF;
 import android.view.animation.DecelerateInterpolator;
 
-
 import com.gospelware.liquidbutton.LiquidButton;
 
 import java.util.Random;

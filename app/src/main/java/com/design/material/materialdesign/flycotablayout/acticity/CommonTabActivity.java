@@ -2,14 +2,13 @@ package com.design.material.materialdesign.flycotablayout.acticity;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 import com.design.material.materialdesign.ViewFindUtils;
 import com.design.material.materialdesign.flycotablayout.TabEntity;
@@ -23,7 +22,7 @@ import com.flyco.tablayout.widget.MsgView;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class CommonTabActivity extends AppCompatActivity {
+public class CommonTabActivity extends BaseActivity {
     private Context mContext = this;
     private ArrayList<Fragment> mFragments = new ArrayList<>();
     private ArrayList<Fragment> mFragments2 = new ArrayList<>();
@@ -48,9 +47,12 @@ public class CommonTabActivity extends AppCompatActivity {
     private CommonTabLayout mTabLayout_8;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_common_tab);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_common_tab, null);
+    }
+
+    @Override
+    protected void initView() {
 
         for (String title : mTitles) {
             mFragments.add(SimpleCardFragment.getInstance("Switch ViewPager " + title));
@@ -138,6 +140,16 @@ public class CommonTabActivity extends AppCompatActivity {
         if (rtv_2_3 != null) {
             rtv_2_3.setBackgroundColor(Color.parseColor("#6D8FB0"));
         }
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
     Random mRandom = new Random();

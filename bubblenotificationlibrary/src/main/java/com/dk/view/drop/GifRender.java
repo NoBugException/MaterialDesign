@@ -5,7 +5,6 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Movie;
 import android.util.DisplayMetrics;
-import android.util.Log;
 
 /**
  * Created by DK on 2015/10/17.

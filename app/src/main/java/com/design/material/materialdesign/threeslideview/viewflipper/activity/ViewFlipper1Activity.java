@@ -1,5 +1,6 @@
 package com.design.material.materialdesign.threeslideview.viewflipper.activity;
 
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
@@ -16,8 +17,8 @@ public class ViewFlipper1Activity extends BaseActivity {
     int[] ids={R.drawable.one,R.drawable.two,R.drawable.three,R.drawable.four};
 
     @Override
-    protected int getRootView() {
-        return R.layout.activity_viewflipper1;
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_viewflipper1, null);
     }
 
     @Override

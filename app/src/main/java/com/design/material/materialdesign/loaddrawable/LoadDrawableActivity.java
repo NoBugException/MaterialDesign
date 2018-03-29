@@ -19,10 +19,9 @@ public class LoadDrawableActivity extends BaseActivity implements View.OnClickLi
     private Button mBtnShapeChange;
     private Button mBtnCircleRotate;
 
-
     @Override
-    protected int getRootView() {
-        return R.layout.activity_loaddrawble;
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_loaddrawble, null);
     }
 
     @Override

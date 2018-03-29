@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.design.material.materialdesign.BaseActivity;
@@ -82,8 +83,8 @@ public class PDFViewActivity extends BaseActivity implements OnPageChangeListene
     }
 
     @Override
-    protected int getRootView() {
-        return R.layout.activity_pdfview;
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_pdfview, null);
     }
 
     @Override

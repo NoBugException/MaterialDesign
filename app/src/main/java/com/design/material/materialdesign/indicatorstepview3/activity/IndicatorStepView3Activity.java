@@ -1,13 +1,11 @@
 package com.design.material.materialdesign.indicatorstepview3.activity;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
-
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 import com.design.material.materialdesign.indicatorstepview3.SpringIndicator;
 import com.design.material.materialdesign.indicatorstepview3.viewpager.ScrollerViewPager;
@@ -19,19 +17,19 @@ import github.chenupt.multiplemodel.viewpager.ModelPagerAdapter;
 import github.chenupt.multiplemodel.viewpager.PagerModelManager;
 
 
-public class IndicatorStepView3Activity extends ActionBarActivity {
+public class IndicatorStepView3Activity extends BaseActivity {
 
     ScrollerViewPager viewPager;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_indiacatorstepview3);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_indiacatorstepview3, null);
+    }
 
+    @Override
+    protected void initView() {
         viewPager = (ScrollerViewPager) findViewById(R.id.view_pager);
         SpringIndicator springIndicator = (SpringIndicator) findViewById(R.id.indicator);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
-        setSupportActionBar(toolbar);
 
         PagerModelManager manager = new PagerModelManager();
         manager.addCommonFragment(GuideFragment.class, getBgRes(), getTitles());
@@ -41,6 +39,15 @@ public class IndicatorStepView3Activity extends ActionBarActivity {
 
         // just set viewPager
         springIndicator.setViewPager(viewPager);
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
 
     }
 

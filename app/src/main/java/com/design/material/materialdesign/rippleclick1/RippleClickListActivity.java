@@ -1,8 +1,6 @@
 package com.design.material.materialdesign.rippleclick1;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,11 +9,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 
 import java.util.UUID;
 
-public class RippleClickListActivity extends ActionBarActivity implements AdapterView.OnItemClickListener {
+public class RippleClickListActivity extends BaseActivity implements AdapterView.OnItemClickListener {
 
     private final static String[] data;
 
@@ -27,9 +26,12 @@ public class RippleClickListActivity extends ActionBarActivity implements Adapte
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.demo_list);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.demo_list, null);
+    }
+
+    @Override
+    protected void initView() {
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(new ArrayAdapter<>(this, R.layout.demo_list_item, android.R.id.text1, data));
         listView.setOnItemClickListener(this);
@@ -43,6 +45,16 @@ public class RippleClickListActivity extends ActionBarActivity implements Adapte
                 return true;
             }
         });
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
     @Override public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

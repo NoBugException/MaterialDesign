@@ -16,8 +16,8 @@ public class GuideViewActivity extends BaseActivity{
     private Button mBtnAty, mBtnFrag, mBtnList, mBtnView, mBtnFragView, mBtnMore;
 
     @Override
-    protected int getRootView() {
-        return R.layout.activity_guide;
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_guide, null);
     }
 
     @Override

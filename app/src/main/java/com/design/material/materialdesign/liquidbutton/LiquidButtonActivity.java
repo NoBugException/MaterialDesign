@@ -1,5 +1,6 @@
 package com.design.material.materialdesign.liquidbutton;
 
+import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -52,8 +53,8 @@ public class LiquidButtonActivity extends BaseActivity {
     }
 
     @Override
-    protected int getRootView() {
-        return R.layout.activity_liquidbutton;
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_liquidbutton, null);
     }
 
     @Override

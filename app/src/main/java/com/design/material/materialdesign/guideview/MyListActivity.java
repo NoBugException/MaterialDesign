@@ -2,15 +2,16 @@ package com.design.material.materialdesign.guideview;
 
 import android.app.Activity;
 import android.content.Context;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+
 import com.blog.www.guideview.Guide;
 import com.blog.www.guideview.GuideBuilder;
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 
 import java.util.ArrayList;
@@ -21,20 +22,34 @@ import java.util.List;
  * 作者: zhangbin <br>
  * 描述:
  */
-public class MyListActivity extends Activity {
+public class MyListActivity extends BaseActivity {
     ListView listView;
     BaseAdapter adapter;
     static List<String> arrayList = new ArrayList<>();
 
-    @Override protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.my_list_layout);
+    @Override
+    protected View getRootView() {
+        return View.inflate(this, R.layout.my_list_layout, null);
+    }
+
+    @Override
+    protected void initView() {
         for (int i = 1; i < 200; i++) {
             arrayList.add("第" + i + "行");
         }
         listView = (ListView) findViewById(R.id.list);
         adapter = new MyAdapter(this);
         listView.setAdapter(adapter);
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
     private static class MyAdapter extends BaseAdapter {

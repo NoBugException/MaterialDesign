@@ -13,6 +13,7 @@ import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.support.v4.content.ContextCompat;
 import android.util.TypedValue;
+
 import com.afollestad.materialdialogs.util.DialogUtils;
 
 /** @author Aidan Follestad (afollestad) */

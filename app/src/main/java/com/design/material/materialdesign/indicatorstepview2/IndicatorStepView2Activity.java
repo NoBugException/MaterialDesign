@@ -1,23 +1,21 @@
 package com.design.material.materialdesign.indicatorstepview2;
 
-import android.os.Build;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 
 
-public class IndicatorStepView2Activity extends AppCompatActivity {
+public class IndicatorStepView2Activity extends BaseActivity {
 
-    @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_stepper);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_stepper, null);
+    }
 
+    @Override
+    protected void initView() {
         final ViewPager pager = (ViewPager) findViewById(R.id.pager);
         assert pager != null;
         pager.setAdapter(new PagerAdapter(getSupportFragmentManager()));
@@ -32,6 +30,16 @@ public class IndicatorStepView2Activity extends AppCompatActivity {
                 pager.setCurrentItem(step, true);
             }
         });
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
 }

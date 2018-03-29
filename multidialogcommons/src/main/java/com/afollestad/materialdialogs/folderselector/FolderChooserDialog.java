@@ -1,7 +1,5 @@
 package com.afollestad.materialdialogs.folderselector;
 
-import static com.afollestad.materialdialogs.util.DialogUtils.checkNotNull;
-
 import android.Manifest;
 import android.app.Dialog;
 import android.content.Context;
@@ -19,15 +17,19 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.widget.Toast;
+
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.afollestad.materialdialogs.commons.R;
+
 import java.io.File;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+
+import static com.afollestad.materialdialogs.util.DialogUtils.checkNotNull;
 
 /** @author Aidan Follestad (afollestad) */
 public class FolderChooserDialog extends DialogFragment implements MaterialDialog.ListCallback {

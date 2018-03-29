@@ -1,17 +1,31 @@
 package com.design.material.materialdesign.qqredflag2;
 
-import android.app.Activity;
-import android.os.Bundle;
+import android.view.View;
 
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 
 
-public class BezierViewActivity extends Activity {
+public class BezierViewActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bezierview);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_bezierview, null);
+    }
+
+    @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
 

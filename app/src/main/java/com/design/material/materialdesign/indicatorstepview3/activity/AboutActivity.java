@@ -1,28 +1,44 @@
 package com.design.material.materialdesign.indicatorstepview3.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 
 /**
  * Created by chenupt@gmail.com on 2015/1/25.
  * Description TODO
  */
-public class AboutActivity extends ActionBarActivity {
+public class AboutActivity extends BaseActivity {
 
-    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
-        toolbar = (Toolbar) findViewById(R.id.tool_bar);
         toolbar.setTitle("About this app");
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_about, null);
+    }
+
+    @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
 

@@ -1,12 +1,12 @@
 package com.design.material.materialdesign.guideview;
 
-import android.app.Activity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
 import com.blog.www.guideview.Guide;
 import com.blog.www.guideview.GuideBuilder;
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 
 /**
@@ -14,13 +14,17 @@ import com.design.material.materialdesign.R;
  * 作者: zhangbin <br>
  * 描述:
  */
-public class ViewActivity extends Activity {
+public class ViewActivity extends BaseActivity {
     private LinearLayout ll_nearby, ll_view_group;
     Guide guide;
 
-    @Override protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_simple_guide_view);
+    @Override
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_simple_guide_view, null);
+    }
+
+    @Override
+    protected void initView() {
         ll_nearby = (LinearLayout) findViewById(R.id.ll_nearby);
         ll_view_group = (LinearLayout) findViewById(R.id.ll_view_group);
         ll_view_group.setOnClickListener(new View.OnClickListener() {
@@ -33,6 +37,16 @@ public class ViewActivity extends Activity {
                 showGuideView();
             }
         });
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
     public void showGuideView() {

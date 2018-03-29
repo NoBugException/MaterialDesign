@@ -2,6 +2,7 @@ package com.design.material.materialdesign.mateballloading;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.SeekBar;
 
 import com.design.material.materialdesign.BaseActivity;
@@ -18,8 +19,8 @@ public class MateBallLoadingActivity extends BaseActivity implements SeekBar.OnS
     private SeekBar seekBar, seekBar2, seekBar3;
 
     @Override
-    protected int getRootView() {
-        return R.layout.activity_mateballloading;
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_mateballloading, null);
     }
 
     @Override

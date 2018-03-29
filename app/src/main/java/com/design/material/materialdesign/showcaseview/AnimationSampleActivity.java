@@ -14,12 +14,11 @@ package com.design.material.materialdesign.showcaseview;/*
  * limitations under the License.
  */
 
-import android.app.Activity;
 import android.os.Build;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 import com.github.amlcurran.showcaseview.ShowcaseView;
 import com.github.amlcurran.showcaseview.targets.Target;
@@ -28,7 +27,7 @@ import com.github.amlcurran.showcaseview.targets.ViewTarget;
 /**
  * Created by Alex on 26/10/13.
  */
-public class AnimationSampleActivity extends Activity implements View.OnClickListener {
+public class AnimationSampleActivity extends BaseActivity {
 
     private ShowcaseView showcaseView;
     private int counter = 0;
@@ -37,10 +36,12 @@ public class AnimationSampleActivity extends Activity implements View.OnClickLis
     private TextView textView3;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animation);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_animation, null);
+    }
 
+    @Override
+    protected void initView() {
         textView1 = (TextView) findViewById(R.id.textView);
         textView2 = (TextView) findViewById(R.id.textView2);
         textView3 = (TextView) findViewById(R.id.textView3);
@@ -50,6 +51,16 @@ public class AnimationSampleActivity extends Activity implements View.OnClickLis
                 .setOnClickListener(this)
                 .build();
         showcaseView.setButtonText(getString(R.string.next));
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
 

@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.design.material.materialdesign.base.BBaseBean;
 import com.design.material.materialdesign.bezier.BezierActivity;
+import com.design.material.materialdesign.bottomnavgationview.BottomNavigationActivity;
 import com.design.material.materialdesign.bottomnavgationview.BottomNavigationBean;
 import com.design.material.materialdesign.cardslide.CardSlideActivity;
 import com.design.material.materialdesign.cardslide.CardSlideBean;
@@ -47,7 +48,6 @@ import com.design.material.materialdesign.rippleclick1.RippleClickActivity;
 import com.design.material.materialdesign.showcaseview.ShowCaseBean;
 import com.design.material.materialdesign.showcaseview.ShowCaseView;
 import com.design.material.materialdesign.threeslideview.SlideBean;
-import com.design.material.materialdesign.bottomnavgationview.BottomNavigationActivity;
 import com.design.material.materialdesign.threeslideview.viewflipper.activity.ViewFlipper1Activity;
 import com.design.material.materialdesign.threeslideview.viewflipper.activity.ViewFlipper2Activity;
 import com.design.material.materialdesign.threeslideview.viewflow.ViewFlowActivity;
@@ -62,8 +62,8 @@ public class MaterialDesign extends BaseActivity {
     private RecyclerView mRecyclerView;
 
     @Override
-    protected int getRootView() {
-        return R.layout.activity_material_design;
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_material_design, null);
     }
 
     @Override

@@ -1,6 +1,5 @@
 package com.design.material.materialdesign.showcaseview;
 
-import android.app.Activity;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -8,26 +7,39 @@ import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
-import android.os.Bundle;
+import android.view.View;
 
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 import com.github.amlcurran.showcaseview.ShowcaseDrawer;
 import com.github.amlcurran.showcaseview.ShowcaseView;
 import com.github.amlcurran.showcaseview.targets.ViewTarget;
 
-public class CustomShowcaseActivity extends Activity {
+public class CustomShowcaseActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_custom_showcase);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_custom_showcase, null);
+    }
 
+    @Override
+    protected void initView() {
         new ShowcaseView.Builder(this)
                 .setTarget(new ViewTarget(R.id.imageView, this))
                 .setContentTitle(R.string.custom_text_painting_title)
                 .setContentText(R.string.custom_text_painting_text)
                 .setShowcaseDrawer(new CustomShowcaseView(getResources()))
                 .build();
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
     private static class CustomShowcaseView implements ShowcaseDrawer {

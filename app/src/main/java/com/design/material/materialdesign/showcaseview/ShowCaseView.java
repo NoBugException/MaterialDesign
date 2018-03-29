@@ -36,8 +36,8 @@ public class ShowCaseView extends BaseActivity implements View.OnClickListener, 
     ListView listView;
 
     @Override
-    protected int getRootView() {
-        return R.layout.layout_showcaseview;
+    protected View getRootView() {
+        return View.inflate(this, R.layout.layout_showcaseview, null);
     }
 
     @Override

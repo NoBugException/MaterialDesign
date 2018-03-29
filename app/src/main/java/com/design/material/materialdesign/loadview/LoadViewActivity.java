@@ -68,10 +68,10 @@ public class LoadViewActivity extends BaseActivity {
     int mValueLVNews = 0;
 
     @Override
-    protected int getRootView() {
+    protected View getRootView() {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);//去掉信息栏
-        return R.layout.activity_loadview;
+        return View.inflate(this, R.layout.activity_loadview, null);
     }
 
     @Override

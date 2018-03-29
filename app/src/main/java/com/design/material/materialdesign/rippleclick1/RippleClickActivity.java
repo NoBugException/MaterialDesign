@@ -2,23 +2,25 @@ package com.design.material.materialdesign.rippleclick1;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import com.balysv.materialripple.MaterialRippleLayout;
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 
 
-public class RippleClickActivity extends ActionBarActivity implements View.OnClickListener, View.OnLongClickListener {
+public class RippleClickActivity extends BaseActivity implements View.OnClickListener, View.OnLongClickListener {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rippleclick1);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_rippleclick1, null);
+    }
+
+    @Override
+    protected void initView() {
 
         // xml initialization
         findViewById(R.id.ripple_layout_1).setOnClickListener(this);
@@ -34,6 +36,16 @@ public class RippleClickActivity extends ActionBarActivity implements View.OnCli
 
         view.setOnLongClickListener(this);
         view.setOnClickListener(this);
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
     @Override public void onClick(View v) {

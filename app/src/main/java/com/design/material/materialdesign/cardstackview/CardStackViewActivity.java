@@ -54,8 +54,8 @@ public class CardStackViewActivity extends BaseActivity implements CardStackView
     private TestStackAdapter mTestStackAdapter;
 
     @Override
-    protected int getRootView() {
-        return R.layout.activity_cardstack;
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_cardstack, null);
     }
 
     @Override

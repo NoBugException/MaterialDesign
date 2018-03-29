@@ -1,6 +1,7 @@
 package com.design.material.materialdesign.threeslideview.viewflow;
 
 import android.content.res.Configuration;
+import android.view.View;
 
 import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
@@ -16,8 +17,8 @@ public class ViewFlowActivity extends BaseActivity {
     private CircleFlowIndicator indic;  //页表指示器
 
     @Override
-    protected int getRootView() {
-        return R.layout.activity_viewflow;
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_viewflow, null);
     }
 
     @Override

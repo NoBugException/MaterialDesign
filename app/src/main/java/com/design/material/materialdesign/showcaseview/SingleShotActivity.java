@@ -15,20 +15,23 @@ package com.design.material.materialdesign.showcaseview;/*
  */
 
 
-import android.app.Activity;
-import android.os.Bundle;
+import android.view.View;
 
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 import com.github.amlcurran.showcaseview.ShowcaseView;
 import com.github.amlcurran.showcaseview.targets.Target;
 import com.github.amlcurran.showcaseview.targets.ViewTarget;
 
-public class SingleShotActivity extends Activity {
+public class SingleShotActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_single_shot);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_single_shot, null);
+    }
+
+    @Override
+    protected void initView() {
 
         Target viewTarget = new ViewTarget(R.id.button, this);
         new ShowcaseView.Builder(this)
@@ -38,5 +41,15 @@ public class SingleShotActivity extends Activity {
                 .setStyle(R.style.CustomShowcaseTheme3)
                 .singleShot(2)
                 .build();
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 }

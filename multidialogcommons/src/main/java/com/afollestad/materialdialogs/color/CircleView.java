@@ -23,6 +23,7 @@ import android.util.TypedValue;
 import android.view.Gravity;
 import android.widget.FrameLayout;
 import android.widget.Toast;
+
 import com.afollestad.materialdialogs.util.DialogUtils;
 
 public class CircleView extends FrameLayout {

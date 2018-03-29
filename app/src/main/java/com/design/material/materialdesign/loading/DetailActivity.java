@@ -3,22 +3,21 @@ package com.design.material.materialdesign.loading;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 import com.github.ybq.android.spinkit.SpinKitView;
 import com.github.ybq.android.spinkit.SpriteFactory;
 import com.github.ybq.android.spinkit.Style;
 import com.github.ybq.android.spinkit.sprite.Sprite;
 
-public class DetailActivity extends AppCompatActivity implements Colors {
+public class DetailActivity extends BaseActivity implements Colors {
 
     @SuppressWarnings("WeakerAccess")
     public static void start(Context context, int position) {
@@ -28,9 +27,12 @@ public class DetailActivity extends AppCompatActivity implements Colors {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_detail, null);
+    }
+
+    @Override
+    protected void initView() {
         ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
         viewPager.setOffscreenPageLimit(0);
         viewPager.setAdapter(new PagerAdapter() {
@@ -86,5 +88,15 @@ public class DetailActivity extends AppCompatActivity implements Colors {
         });
 
         viewPager.setCurrentItem(getIntent().getIntExtra("position", 0));
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 }

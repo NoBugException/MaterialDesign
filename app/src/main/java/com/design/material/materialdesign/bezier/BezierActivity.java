@@ -13,14 +13,14 @@ package com.design.material.materialdesign.bezier;/*
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 import com.wx.android.common.util.ToastUtils;
 import com.wx.android.common.util.VibratorUtils;
@@ -32,7 +32,7 @@ import com.wx.beziermaker.BezierView;
  *
  * @author venshine
  */
-public class BezierActivity extends AppCompatActivity {
+public class BezierActivity extends BaseActivity {
 
     private BezierView mBezierView;
 
@@ -43,9 +43,12 @@ public class BezierActivity extends AppCompatActivity {
     private Switch mLoop, mTangent;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bezier);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_bezier, null);
+    }
+
+    @Override
+    protected void initView() {
         mBezierView = (BezierView) findViewById(R.id.bezier);
         mTextView = (TextView) findViewById(R.id.textview);
         mSeekBar = (SeekBar) findViewById(R.id.seekbar);
@@ -88,6 +91,16 @@ public class BezierActivity extends AppCompatActivity {
                 mBezierView.setTangent(isChecked);
             }
         });
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
     public void start(View view) {

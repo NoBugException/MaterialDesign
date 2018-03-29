@@ -4,6 +4,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
+import android.view.View;
 
 import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
@@ -32,8 +33,8 @@ public class ViewPager2Activity extends BaseActivity {
     private final int[] TAB_IMGS = new int[]{R.mipmap.ic_launcher,R.mipmap.ic_launcher,R.mipmap.ic_launcher,R.mipmap.ic_launcher};
 
     @Override
-    protected int getRootView() {
-        return R.layout.activity_viewpager2;
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_viewpager2, null);
     }
 
     @Override

@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.view.View;
+
 import java.util.List;
 
 public class SnackbarBehavior extends CoordinatorLayout.Behavior<CircleIndicator> {

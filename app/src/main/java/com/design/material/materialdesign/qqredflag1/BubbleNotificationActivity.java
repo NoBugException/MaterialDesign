@@ -1,7 +1,5 @@
 package com.design.material.materialdesign.qqredflag1;
 
-import android.app.Activity;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,17 +7,21 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 import com.dk.view.drop.CoverManager;
-import com.dk.view.drop.WaterDrop;
 import com.dk.view.drop.CoverManager.OnDragCompeteListener;
+import com.dk.view.drop.WaterDrop;
 
-public class BubbleNotificationActivity extends Activity {
+public class BubbleNotificationActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bubblenotifica);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_bubblenotifica, null);
+    }
+
+    @Override
+    protected void initView() {
         CoverManager.getInstance().init(this);
 
         ListView mList = (ListView) findViewById(R.id.list);
@@ -27,6 +29,15 @@ public class BubbleNotificationActivity extends Activity {
 
         CoverManager.getInstance().setMaxDragDistance(250);
         CoverManager.getInstance().setEffectDuration(150);
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
 
     }
 

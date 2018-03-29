@@ -16,13 +16,13 @@
 
 package com.github.amlcurran.showcaseview;
 
-import android.animation.AnimatorListenerAdapter;
-import android.os.Build.VERSION_CODES;
 import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.annotation.TargetApi;
 import android.graphics.Point;
+import android.os.Build.VERSION_CODES;
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;
 

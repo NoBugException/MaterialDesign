@@ -1,5 +1,7 @@
 package com.design.material.materialdesign.guideview;
 
+import android.view.View;
+
 import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 
@@ -8,9 +10,10 @@ import com.design.material.materialdesign.R;
  */
 
 public class FragActivity extends BaseActivity {
+
     @Override
-    protected int getRootView() {
-        return R.layout.activity_frag;
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_frag, null);
     }
 
     @Override

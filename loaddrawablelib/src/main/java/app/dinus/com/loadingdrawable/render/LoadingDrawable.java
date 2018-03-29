@@ -7,8 +7,6 @@ import android.graphics.Rect;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 
-import app.dinus.com.loadingdrawable.render.LoadingRenderer;
-
 public class LoadingDrawable extends Drawable implements Animatable {
     private final LoadingRenderer mLoadingRender;
 

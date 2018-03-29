@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.blog.www.guideview.Component;
 import com.design.material.materialdesign.R;
 

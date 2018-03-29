@@ -3,6 +3,7 @@ package com.design.material.materialdesign.bottomnavgationview;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.design.material.materialdesign.BaseActivity;
@@ -41,8 +42,8 @@ public class BottomNavigationActivity extends BaseActivity {
 
 
     @Override
-    protected int getRootView() {
-        return R.layout.activity_bottomnavigation;
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_bottomnavigation, null);
     }
 
     @Override

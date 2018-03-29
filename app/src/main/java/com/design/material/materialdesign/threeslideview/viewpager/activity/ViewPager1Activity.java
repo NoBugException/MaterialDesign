@@ -25,8 +25,8 @@ public class ViewPager1Activity extends BaseActivity {
     private CircleIndicator indicator;
 
     @Override
-    protected int getRootView() {
-        return R.layout.activity_viewpager1;
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_viewpager1, null);
     }
 
     @Override

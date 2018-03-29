@@ -1,13 +1,11 @@
 package com.design.material.materialdesign.indicatorstepview;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.baoyachi.stepview.HorizontalStepView;
 import com.baoyachi.stepview.bean.StepBean;
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 
 import java.util.ArrayList;
@@ -18,13 +16,16 @@ import java.util.List;
  * <p>
  * 描述：
  */
-public class TestHorizontalStepViewActivity extends AppCompatActivity
+public class TestHorizontalStepViewActivity extends BaseActivity
 {
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_horizontal);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_test_horizontal, null);
+    }
+
+    @Override
+    protected void initView() {
         findViewById(R.id.btn_status).setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -58,7 +59,15 @@ public class TestHorizontalStepViewActivity extends AppCompatActivity
                         .setStepsViewIndicatorAttentionIcon(ContextCompat.getDrawable(getBaseContext(), R.drawable.attention));//设置StepsViewIndicator AttentionIcon
             }
         });
+    }
 
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
 
     }
 }

@@ -1,28 +1,29 @@
 package com.design.material.materialdesign.showcaseview;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.view.ViewCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.text.SpannableStringBuilder;
 import android.view.MotionEvent;
+import android.view.View;
 import android.view.animation.Interpolator;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 import com.github.amlcurran.showcaseview.OnShowcaseEventListener;
 import com.github.amlcurran.showcaseview.ShowcaseView;
 import com.github.amlcurran.showcaseview.SimpleShowcaseEventListener;
 import com.github.amlcurran.showcaseview.targets.ViewTarget;
 
-public class EventsActivity extends AppCompatActivity {
+public class EventsActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_events);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_events, null);
+    }
 
+    @Override
+    protected void initView() {
         TextView eventLog = (TextView) findViewById(R.id.events_log);
         Button customButton = (Button) getLayoutInflater().inflate(R.layout.view_custom_button, null);
 
@@ -36,6 +37,16 @@ public class EventsActivity extends AppCompatActivity {
                 .setShowcaseEventListener(multiEventListener)
                 .replaceEndButton(customButton)
                 .build();
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
     private static class LogToTextListener implements OnShowcaseEventListener {

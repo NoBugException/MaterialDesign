@@ -18,9 +18,10 @@ public class ViewFlipper2Activity extends BaseActivity implements View.OnTouchLi
     private float touchDownX;  // 手指按下的X坐标
     private float touchUpX;  //手指松开的X坐标
 
+
     @Override
-    protected int getRootView() {
-        return R.layout.activity_viewflipper2;
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_viewflipper2, null);
     }
 
     @Override

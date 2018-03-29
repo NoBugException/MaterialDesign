@@ -1,8 +1,6 @@
 package com.design.material.materialdesign.rippleclick1;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,11 +12,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.balysv.materialripple.MaterialRippleLayout;
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 
 import java.util.UUID;
 
-public class RippleClickRecyclerActivity extends ActionBarActivity {
+public class RippleClickRecyclerActivity extends BaseActivity {
 
     private final static String[] data;
 
@@ -30,12 +29,25 @@ public class RippleClickRecyclerActivity extends ActionBarActivity {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.demo_recycler);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.demo_recycler, null);
+    }
+
+    @Override
+    protected void initView() {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.list);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new MyAdapter());
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
     @Override

@@ -2,12 +2,11 @@ package com.design.material.materialdesign.indicatorstepview;
 
 import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 import com.design.material.materialdesign.indicatorstepview.fragment.DrawCanvasFragment;
 import com.design.material.materialdesign.indicatorstepview.fragment.HorizontalStepviewFragment;
@@ -20,19 +19,16 @@ import com.design.material.materialdesign.indicatorstepview.fragment.VerticalSte
  * <p/>
  * 描述：
  */
-public class IndicatorStepViewActivity extends AppCompatActivity
-{
-
-    private Toolbar toolbar;
+public class IndicatorStepViewActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_indicatorstepview);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_indicatorstepview, null);
+    }
 
+    @Override
+    protected void initView() {
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Title");
         toolbar.setSubtitle("SubTitle");
         toolbar.setLogo(R.mipmap.ic_launcher);
@@ -45,6 +41,15 @@ public class IndicatorStepViewActivity extends AppCompatActivity
         getFragmentManager().beginTransaction().replace(R.id.container, mVerticalStepViewFragment).commit();
     }
 
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
+    }
 
 
     @Override

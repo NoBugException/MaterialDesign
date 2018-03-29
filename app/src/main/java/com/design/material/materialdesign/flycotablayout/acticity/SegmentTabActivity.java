@@ -1,14 +1,13 @@
 package com.design.material.materialdesign.flycotablayout.acticity;
 
 import android.graphics.Color;
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 import com.design.material.materialdesign.ViewFindUtils;
 import com.design.material.materialdesign.flycotablayout.fragment.SimpleCardFragment;
@@ -18,7 +17,7 @@ import com.flyco.tablayout.widget.MsgView;
 
 import java.util.ArrayList;
 
-public class SegmentTabActivity extends AppCompatActivity {
+public class SegmentTabActivity extends BaseActivity {
     private ArrayList<Fragment> mFragments = new ArrayList<>();
     private ArrayList<Fragment> mFragments2 = new ArrayList<>();
 
@@ -29,10 +28,12 @@ public class SegmentTabActivity extends AppCompatActivity {
     private SegmentTabLayout mTabLayout_3;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_segment_tab);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_segment_tab, null);
+    }
 
+    @Override
+    protected void initView() {
         for (String title : mTitles_3) {
             mFragments.add(SimpleCardFragment.getInstance("Switch ViewPager " + title));
         }
@@ -67,6 +68,16 @@ public class SegmentTabActivity extends AppCompatActivity {
         if (rtv_3_2 != null) {
             rtv_3_2.setBackgroundColor(Color.parseColor("#6D8FB0"));
         }
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
     private void tl_3() {

@@ -8,14 +8,12 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
-import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.ColorInt;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.Html;
 import android.text.InputType;
@@ -43,14 +41,16 @@ import com.afollestad.materialdialogs.internal.ThemeSingleton;
 import com.afollestad.materialdialogs.simplelist.MaterialSimpleListAdapter;
 import com.afollestad.materialdialogs.simplelist.MaterialSimpleListItem;
 import com.afollestad.materialdialogs.util.DialogUtils;
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
+
+import java.io.File;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import java.io.File;
 
 /** @author Aidan Follestad (afollestad) */
-public class MultiDialogActivity extends AppCompatActivity
+public class MultiDialogActivity extends BaseActivity
         implements FolderChooserDialog.FolderCallback,
         FileChooserDialog.FileCallback,
         ColorChooserDialog.ColorCallback {
@@ -93,14 +93,27 @@ public class MultiDialogActivity extends AppCompatActivity
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_multidialog);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_multidialog, null);
+    }
+
+    @Override
+    protected void initView() {
         ButterKnife.bind(this);
 
         handler = new Handler();
         primaryPreselect = DialogUtils.resolveColor(this, R.attr.colorPrimary);
         accentPreselect = DialogUtils.resolveColor(this, R.attr.colorAccent);
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
     @Override

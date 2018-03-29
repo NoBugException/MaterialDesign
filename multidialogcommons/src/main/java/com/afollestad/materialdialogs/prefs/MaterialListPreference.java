@@ -12,8 +12,10 @@ import android.preference.ListPreference;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
+
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
+
 import java.lang.reflect.Field;
 
 /** @author Marc Holder Kluver (marchold), Aidan Follestad (afollestad) */

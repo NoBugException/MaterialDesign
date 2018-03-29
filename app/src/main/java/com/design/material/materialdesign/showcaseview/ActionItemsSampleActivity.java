@@ -1,21 +1,23 @@
 package com.design.material.materialdesign.showcaseview;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.View;
 
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 import com.github.amlcurran.showcaseview.ShowcaseView;
 import com.github.amlcurran.showcaseview.targets.ViewTarget;
 
-public class ActionItemsSampleActivity extends AppCompatActivity {
+public class ActionItemsSampleActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_action_items);
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_action_items, null);
+    }
+
+    @Override
+    protected void initView() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -32,6 +34,16 @@ public class ActionItemsSampleActivity extends AppCompatActivity {
         } catch (ViewTargets.MissingViewException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initListener() {
+
     }
 
     @Override

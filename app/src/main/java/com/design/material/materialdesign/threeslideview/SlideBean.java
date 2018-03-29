@@ -1,7 +1,7 @@
 package com.design.material.materialdesign.threeslideview;
 
-import com.design.material.materialdesign.MaterialItemViewType;
 import com.design.material.materialdesign.BaseBean;
+import com.design.material.materialdesign.MaterialItemViewType;
 
 /**
  * Created by beixinyuan_android on 2018/3/5.

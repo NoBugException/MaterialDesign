@@ -3,26 +3,38 @@ package com.design.material.materialdesign.multidialog;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 
+import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 
 @SuppressLint("NewApi")
-public class PreferenceActivity extends AppCompatActivity {
+public class PreferenceActivity extends BaseActivity {
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.preference_activity_custom);
-//    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+  protected View getRootView() {
+    return View.inflate(this, R.layout.preference_activity_custom, null);
+  }
 
+  @Override
+  protected void initView() {
     if (getFragmentManager().findFragmentById(R.id.content_frame) == null) {
       getFragmentManager()
-          .beginTransaction()
-          .replace(R.id.content_frame, new SettingsFragment())
-          .commit();
+              .beginTransaction()
+              .replace(R.id.content_frame, new SettingsFragment())
+              .commit();
     }
+  }
+
+  @Override
+  protected void initData() {
+
+  }
+
+  @Override
+  protected void initListener() {
+
   }
 
   @Override

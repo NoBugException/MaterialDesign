@@ -33,8 +33,8 @@ public class SlidingTabActivity extends BaseActivity implements OnTabSelectListe
     private MyPagerAdapter mAdapter;
 
     @Override
-    protected int getRootView() {
-        return R.layout.activity_sliding_tab;
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_sliding_tab, null);
     }
 
     @Override

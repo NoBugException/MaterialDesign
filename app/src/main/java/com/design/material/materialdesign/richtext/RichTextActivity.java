@@ -2,19 +2,13 @@ package com.design.material.materialdesign.richtext;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.design.material.materialdesign.BaseActivity;
 import com.design.material.materialdesign.R;
 import com.zzhoujay.richtext.CacheType;
-import com.zzhoujay.richtext.ImageHolder;
 import com.zzhoujay.richtext.RichText;
-import com.zzhoujay.richtext.callback.OnImageClickListener;
-import com.zzhoujay.richtext.callback.SimpleImageFixCallback;
-
-import java.util.Calendar;
-import java.util.List;
 
 /**
  * Created by beixinyuan_android on 2018/3/15.
@@ -83,10 +77,9 @@ public class RichTextActivity extends BaseActivity {
     int ready = 0;
     int init = 0;
 
-
     @Override
-    protected int getRootView() {
-        return R.layout.activity_richtext;
+    protected View getRootView() {
+        return View.inflate(this, R.layout.activity_richtext, null);
     }
 
     @Override
