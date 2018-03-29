@@ -39,6 +39,7 @@ import com.design.material.materialdesign.multidialog.MultiDialogActivity;
 import com.design.material.materialdesign.multidialog.MultiDialogBean;
 import com.design.material.materialdesign.pdfview.PDFViewActivity;
 import com.design.material.materialdesign.pdfview.PdfViewBean;
+import com.design.material.materialdesign.qqredflag1.BubbleNotificationActivity;
 import com.design.material.materialdesign.richtext.RichTextActivity;
 import com.design.material.materialdesign.richtext.RichTextBean;
 import com.design.material.materialdesign.showcaseview.ShowCaseBean;
@@ -157,10 +158,15 @@ public class MaterialDesign extends BaseActivity {
         stepViewBean3.setName("指示器-StepView3");
         mDatas.add(stepViewBean3);
 
-        BBaseBean bBaseBean = new BBaseBean();
-        bBaseBean.setFlag(1);
-        bBaseBean.setName("贝塞尔曲线");
-        mDatas.add(bBaseBean);
+        BBaseBean bBaseBean1 = new BBaseBean();
+        bBaseBean1.setFlag(1);
+        bBaseBean1.setName("贝塞尔曲线");
+        mDatas.add(bBaseBean1);
+
+        BBaseBean bBaseBean2 = new BBaseBean();
+        bBaseBean2.setFlag(2);
+        bBaseBean2.setName("模仿QQ的未读小红点-爱心爆炸");
+        mDatas.add(bBaseBean2);
 
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
@@ -287,6 +293,8 @@ public class MaterialDesign extends BaseActivity {
                             public void onClick(View view) {
                                 if(bbaseBean.getFlag() == 1){
                                     startActivity(BezierActivity.class);
+                                }else if(bbaseBean.getFlag() == 2){
+                                    startActivity(BubbleNotificationActivity.class);
                                 }
                             }
                         });

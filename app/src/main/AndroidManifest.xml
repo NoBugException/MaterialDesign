@@ -121,6 +121,8 @@
         <activity android:name=".indicatorstepview3.activity.AboutActivity"/>
 
         <activity android:name=".bezier.BezierActivity"/>
+
+        <activity android:name=".qqredflag1.BubbleNotificationActivity"/>
     </application>
 
 </manifest>
