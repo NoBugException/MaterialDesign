@@ -41,6 +41,7 @@ dependencies {
     compile project(':cardstack')
     compile project(':bubblenotificationlibrary')
     compile project(':cardslidelib')
+    compile project(':ripple1library')
     compile project(':loadinglib')
     compile project(':loaddrawablelib')
     compile project(':loadingviewlib')

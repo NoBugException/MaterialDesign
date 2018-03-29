@@ -43,6 +43,7 @@ import com.design.material.materialdesign.qqredflag1.BubbleNotificationActivity;
 import com.design.material.materialdesign.qqredflag2.BezierViewActivity;
 import com.design.material.materialdesign.richtext.RichTextActivity;
 import com.design.material.materialdesign.richtext.RichTextBean;
+import com.design.material.materialdesign.rippleclick1.RippleClickActivity;
 import com.design.material.materialdesign.showcaseview.ShowCaseBean;
 import com.design.material.materialdesign.showcaseview.ShowCaseView;
 import com.design.material.materialdesign.threeslideview.SlideBean;
@@ -174,6 +175,11 @@ public class MaterialDesign extends BaseActivity {
         bBaseBean3.setName("另一种模仿QQ的未读小红点");
         mDatas.add(bBaseBean3);
 
+        BBaseBean bBaseBean4 = new BBaseBean();
+        bBaseBean4.setFlag(4);
+        bBaseBean4.setName("点击特效-涟漪");
+        mDatas.add(bBaseBean4);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -303,6 +309,8 @@ public class MaterialDesign extends BaseActivity {
                                     startActivity(BubbleNotificationActivity.class);
                                 }else if(bbaseBean.getFlag() == 3){
                                     startActivity(BezierViewActivity.class);
+                                }else if(bbaseBean.getFlag() ==4){
+                                    startActivity(RippleClickActivity.class);
                                 }
                             }
                         });
