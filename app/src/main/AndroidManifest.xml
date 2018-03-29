@@ -123,6 +123,8 @@
         <activity android:name=".bezier.BezierActivity"/>
 
         <activity android:name=".qqredflag1.BubbleNotificationActivity"/>
+
+        <activity android:name=".qqredflag2.BezierViewActivity"/>
     </application>
 
 </manifest>

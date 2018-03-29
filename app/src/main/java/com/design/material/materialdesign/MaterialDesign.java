@@ -40,6 +40,7 @@ import com.design.material.materialdesign.multidialog.MultiDialogBean;
 import com.design.material.materialdesign.pdfview.PDFViewActivity;
 import com.design.material.materialdesign.pdfview.PdfViewBean;
 import com.design.material.materialdesign.qqredflag1.BubbleNotificationActivity;
+import com.design.material.materialdesign.qqredflag2.BezierViewActivity;
 import com.design.material.materialdesign.richtext.RichTextActivity;
 import com.design.material.materialdesign.richtext.RichTextBean;
 import com.design.material.materialdesign.showcaseview.ShowCaseBean;
@@ -168,6 +169,11 @@ public class MaterialDesign extends BaseActivity {
         bBaseBean2.setName("模仿QQ的未读小红点-爱心爆炸");
         mDatas.add(bBaseBean2);
 
+        BBaseBean bBaseBean3 = new BBaseBean();
+        bBaseBean3.setFlag(3);
+        bBaseBean3.setName("另一种模仿QQ的未读小红点");
+        mDatas.add(bBaseBean3);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -295,6 +301,8 @@ public class MaterialDesign extends BaseActivity {
                                     startActivity(BezierActivity.class);
                                 }else if(bbaseBean.getFlag() == 2){
                                     startActivity(BubbleNotificationActivity.class);
+                                }else if(bbaseBean.getFlag() == 3){
+                                    startActivity(BezierViewActivity.class);
                                 }
                             }
                         });
