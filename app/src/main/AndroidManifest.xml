@@ -119,6 +119,8 @@
         <activity android:name=".indicatorstepview3.activity.IndicatorStepView3Activity"/>
 
         <activity android:name=".indicatorstepview3.activity.AboutActivity"/>
+
+        <activity android:name=".bezier.BezierActivity"/>
     </application>
 
 </manifest>

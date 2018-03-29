@@ -6,6 +6,8 @@ package com.design.material.materialdesign;
 
 public class MaterialItemViewType {
 
+    //默认组件类型
+    public static final int BASE = 0;
     //BottomNavigation组件类型
     public static final int BOTTOMNAVIGATION = 1;
     //常用的三种滑动组件

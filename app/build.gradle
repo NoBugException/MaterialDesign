@@ -37,6 +37,7 @@ dependencies {
     compile project(':stepview')
     compile project(path: ':guideview')
     compile project(path: ':showcaseviewlibrary')
+    compile project(':bezier')
     compile project(':cardstack')
     compile project(':cardslidelib')
     compile project(':loadinglib')

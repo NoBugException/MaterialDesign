@@ -3,11 +3,11 @@ package com.design.material.materialdesign;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.design.material.materialdesign.base.BBaseBean;
+import com.design.material.materialdesign.bezier.BezierActivity;
 import com.design.material.materialdesign.bottomnavgationview.BottomNavigationBean;
 import com.design.material.materialdesign.cardslide.CardSlideActivity;
 import com.design.material.materialdesign.cardslide.CardSlideBean;
@@ -50,7 +50,6 @@ import com.design.material.materialdesign.threeslideview.viewflipper.activity.Vi
 import com.design.material.materialdesign.threeslideview.viewflow.ViewFlowActivity;
 import com.design.material.materialdesign.threeslideview.viewpager.activity.ViewPager1Activity;
 import com.design.material.materialdesign.threeslideview.viewpager.activity.ViewPager2Activity;
-import com.zzhoujay.richtext.RichText;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -158,6 +157,11 @@ public class MaterialDesign extends BaseActivity {
         stepViewBean3.setName("指示器-StepView3");
         mDatas.add(stepViewBean3);
 
+        BBaseBean bBaseBean = new BBaseBean();
+        bBaseBean.setFlag(1);
+        bBaseBean.setName("贝塞尔曲线");
+        mDatas.add(bBaseBean);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -167,6 +171,9 @@ public class MaterialDesign extends BaseActivity {
             public int getLayoutId(int itemType) {
                 int layoutId = -1;
                 switch (itemType){
+                    case MaterialItemViewType.BASE:
+                        layoutId =  R.layout.item_base;
+                        break;
                     case MaterialItemViewType.BOTTOMNAVIGATION:
                         layoutId =  R.layout.item_bottomnavigation;
                         break;
@@ -260,7 +267,7 @@ public class MaterialDesign extends BaseActivity {
                 }else if(baseBean instanceof StepViewBean){
                     return MaterialItemViewType.STEPVIEW;
                 }
-                return 0;
+                return MaterialItemViewType.BASE;
             }
         }) {
             @Override
@@ -269,6 +276,21 @@ public class MaterialDesign extends BaseActivity {
                 TextView type;
                 TextView mame;
                 switch (baseBean.getItemViewType()){
+                    case MaterialItemViewType.BASE:
+                        final BBaseBean bbaseBean = (BBaseBean) baseBean;
+                        mame = holder.getView(R.id.id_item_materialname);
+                        mame.setText(bbaseBean.getName());
+                        type = holder.getView(R.id.id_item_materialtype);
+                        type.setText(String.valueOf(bbaseBean.getItemViewType()));
+                        holder.setOnClickListener(R.id.root, new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                if(bbaseBean.getFlag() == 1){
+                                    startActivity(BezierActivity.class);
+                                }
+                            }
+                        });
+                        break;
                     case MaterialItemViewType.BOTTOMNAVIGATION:
                         BottomNavigationBean bottomNavigationBean1 = (BottomNavigationBean) baseBean;
 //                        layoutInflater = LayoutInflater.from(MaterialDesign.this);
