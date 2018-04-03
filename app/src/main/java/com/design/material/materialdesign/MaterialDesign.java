@@ -16,6 +16,7 @@ import com.design.material.materialdesign.cardstackview.CardStackBean;
 import com.design.material.materialdesign.cardstackview.CardStackViewActivity;
 import com.design.material.materialdesign.expandingpager.ExpandingPagerBean;
 import com.design.material.materialdesign.expandingpager.ExpandingpagerActivity;
+import com.design.material.materialdesign.floatingactionbutton.FloatingActionButtonActivity;
 import com.design.material.materialdesign.flycotablayout.FlycoBean;
 import com.design.material.materialdesign.flycotablayout.acticity.CommonTabActivity;
 import com.design.material.materialdesign.flycotablayout.acticity.SegmentTabActivity;
@@ -186,6 +187,11 @@ public class MaterialDesign extends BaseActivity {
         bBaseBean5.setName("点击特效-涟漪2");
         mDatas.add(bBaseBean5);
 
+        BBaseBean bBaseBean6 = new BBaseBean();
+        bBaseBean6.setFlag(6);
+        bBaseBean6.setName("Floatingactionbutton");
+        mDatas.add(bBaseBean6);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -319,6 +325,8 @@ public class MaterialDesign extends BaseActivity {
                                     startActivity(RippleClickActivity.class);
                                 }else if(bbaseBean.getFlag() == 5){
                                     startActivity(RippleClick2Activity.class);
+                                }else if(bbaseBean.getFlag() == 6){
+                                    startActivity(FloatingActionButtonActivity.class);
                                 }
                             }
                         });
