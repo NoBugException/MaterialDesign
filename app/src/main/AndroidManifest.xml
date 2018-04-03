@@ -132,6 +132,8 @@
         <activity android:name=".rippleclick1.RippleClickListActivity"/>
 
         <activity android:name=".rippleclick1.RippleClickRecyclerActivity"/>
+
+        <activity android:name=".rippleclick2.RippleClick2Activity"/>
     </application>
 
 </manifest>

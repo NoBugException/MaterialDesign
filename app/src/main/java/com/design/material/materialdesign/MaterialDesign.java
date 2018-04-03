@@ -45,6 +45,7 @@ import com.design.material.materialdesign.qqredflag2.BezierViewActivity;
 import com.design.material.materialdesign.richtext.RichTextActivity;
 import com.design.material.materialdesign.richtext.RichTextBean;
 import com.design.material.materialdesign.rippleclick1.RippleClickActivity;
+import com.design.material.materialdesign.rippleclick2.RippleClick2Activity;
 import com.design.material.materialdesign.showcaseview.ShowCaseBean;
 import com.design.material.materialdesign.showcaseview.ShowCaseView;
 import com.design.material.materialdesign.threeslideview.SlideBean;
@@ -180,6 +181,11 @@ public class MaterialDesign extends BaseActivity {
         bBaseBean4.setName("点击特效-涟漪");
         mDatas.add(bBaseBean4);
 
+        BBaseBean bBaseBean5 = new BBaseBean();
+        bBaseBean5.setFlag(5);
+        bBaseBean5.setName("点击特效-涟漪2");
+        mDatas.add(bBaseBean5);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -311,6 +317,8 @@ public class MaterialDesign extends BaseActivity {
                                     startActivity(BezierViewActivity.class);
                                 }else if(bbaseBean.getFlag() ==4){
                                     startActivity(RippleClickActivity.class);
+                                }else if(bbaseBean.getFlag() == 5){
+                                    startActivity(RippleClick2Activity.class);
                                 }
                             }
                         });
