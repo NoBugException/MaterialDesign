@@ -42,5 +42,7 @@ public class MaterialItemViewType {
     public static final int MULTIDIALOG = 16;
     //指示器-StepView
     public static final int STEPVIEW = 17;
+    //MaterialSheetFab + RecyclerView（StaggeredGridLayoutManager）+ActionBarDrawerToggle
+    public static final int SHEETFAB = 18;
 
 }

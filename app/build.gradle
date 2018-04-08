@@ -43,6 +43,7 @@ dependencies {
     compile project(':cardslidelib')
     compile project(':ripple1library')
     compile project(':ripple2library')
+    compile project(':material_sheet_fab_lib')
     compile project(':loadinglib')
     compile project(':loaddrawablelib')
     compile project(':loadingviewlib')

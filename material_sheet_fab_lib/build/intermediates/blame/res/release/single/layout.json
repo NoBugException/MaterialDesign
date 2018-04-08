@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\material-sheet-fab-master\\material-sheet-fab\\build\\intermediates\\res\\merged\\release\\layout\\dim_overlay.xml",
+        "source": "E:\\material-sheet-fab-master\\material-sheet-fab\\src\\main\\res\\layout\\dim_overlay.xml"
+    },
+    {
+        "merged": "E:\\MaterialDesign\\material_sheet_fab_lib\\build\\intermediates\\res\\merged\\release\\layout\\dim_overlay.xml",
+        "source": "E:\\MaterialDesign\\material_sheet_fab_lib\\src\\main\\res\\layout\\dim_overlay.xml"
+    }
+]

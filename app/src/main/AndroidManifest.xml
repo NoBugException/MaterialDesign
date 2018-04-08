@@ -136,6 +136,9 @@
         <activity android:name=".rippleclick2.RippleClick2Activity"/>
 
         <activity android:name=".floatingactionbutton.FloatingActionButtonActivity"/>
+
+        <activity android:name=".sheetfab.SheetfabActivity"/>
+
     </application>
 
 </manifest>

@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/loaddrawablelib/loaddrawablelib.iml" filepath="$PROJECT_DIR$/loaddrawablelib/loaddrawablelib.iml" />
       <module fileurl="file://$PROJECT_DIR$/loadinglib/loadinglib.iml" filepath="$PROJECT_DIR$/loadinglib/loadinglib.iml" />
       <module fileurl="file://$PROJECT_DIR$/loadingviewlib/loadingviewlib.iml" filepath="$PROJECT_DIR$/loadingviewlib/loadingviewlib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/material_sheet_fab_lib/material_sheet_fab_lib.iml" filepath="$PROJECT_DIR$/material_sheet_fab_lib/material_sheet_fab_lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/multidialogcommons/multidialogcommons.iml" filepath="$PROJECT_DIR$/multidialogcommons/multidialogcommons.iml" />
       <module fileurl="file://$PROJECT_DIR$/multidialogcore/multidialogcore.iml" filepath="$PROJECT_DIR$/multidialogcore/multidialogcore.iml" />
       <module fileurl="file://$PROJECT_DIR$/richtext/richtext.iml" filepath="$PROJECT_DIR$/richtext/richtext.iml" />

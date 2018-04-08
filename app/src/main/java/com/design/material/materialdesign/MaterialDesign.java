@@ -47,6 +47,7 @@ import com.design.material.materialdesign.richtext.RichTextActivity;
 import com.design.material.materialdesign.richtext.RichTextBean;
 import com.design.material.materialdesign.rippleclick1.RippleClickActivity;
 import com.design.material.materialdesign.rippleclick2.RippleClick2Activity;
+import com.design.material.materialdesign.sheetfab.SheetfabActivity;
 import com.design.material.materialdesign.showcaseview.ShowCaseBean;
 import com.design.material.materialdesign.showcaseview.ShowCaseView;
 import com.design.material.materialdesign.threeslideview.SlideBean;
@@ -192,6 +193,11 @@ public class MaterialDesign extends BaseActivity {
         bBaseBean6.setName("Floatingactionbutton");
         mDatas.add(bBaseBean6);
 
+        BBaseBean bBaseBean7 = new BBaseBean();
+        bBaseBean7.setFlag(7);
+        bBaseBean7.setName("MaterialSheetFab + RecyclerView（StaggeredGridLayoutManager）+ActionBarDrawerToggle");
+        mDatas.add(bBaseBean7);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -327,6 +333,8 @@ public class MaterialDesign extends BaseActivity {
                                     startActivity(RippleClick2Activity.class);
                                 }else if(bbaseBean.getFlag() == 6){
                                     startActivity(FloatingActionButtonActivity.class);
+                                }else if(bbaseBean.getFlag() == 7){
+                                    startActivity(SheetfabActivity.class);
                                 }
                             }
                         });
