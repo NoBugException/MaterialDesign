@@ -14,6 +14,7 @@ import com.design.material.materialdesign.cardslide.CardSlideActivity;
 import com.design.material.materialdesign.cardslide.CardSlideBean;
 import com.design.material.materialdesign.cardstackview.CardStackBean;
 import com.design.material.materialdesign.cardstackview.CardStackViewActivity;
+import com.design.material.materialdesign.circualreveal.CircualrevealActivity;
 import com.design.material.materialdesign.expandingpager.ExpandingPagerBean;
 import com.design.material.materialdesign.expandingpager.ExpandingpagerActivity;
 import com.design.material.materialdesign.floatingactionbutton.FloatingActionButtonActivity;
@@ -198,6 +199,11 @@ public class MaterialDesign extends BaseActivity {
         bBaseBean7.setName("MaterialSheetFab + RecyclerView（StaggeredGridLayoutManager）+ActionBarDrawerToggle");
         mDatas.add(bBaseBean7);
 
+        BBaseBean bBaseBean8 = new BBaseBean();
+        bBaseBean8.setFlag(8);
+        bBaseBean8.setName("CircularReveal");
+        mDatas.add(bBaseBean8);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -335,6 +341,8 @@ public class MaterialDesign extends BaseActivity {
                                     startActivity(FloatingActionButtonActivity.class);
                                 }else if(bbaseBean.getFlag() == 7){
                                     startActivity(SheetfabActivity.class);
+                                }else if(bbaseBean.getFlag() == 8){
+                                    startActivity(CircualrevealActivity.class);
                                 }
                             }
                         });

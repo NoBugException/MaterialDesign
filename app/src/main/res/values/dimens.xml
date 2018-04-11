@@ -87,4 +87,13 @@
     <dimen name="note_corner_radius">2dp</dimen>
     <dimen name="note_textsize">14sp</dimen>
     <dimen name="note_title_textsize">24sp</dimen>
+
+    <dimen name="material_card_width">96dp</dimen>
+    <dimen name="material_card_height">96dp</dimen>
+    <dimen name="material_gap_large">16dp</dimen>
+    <dimen name="radial_card_width">220dp</dimen>
+    <dimen name="radial_card_height">220dp</dimen>
+    <dimen name="fab_inner_circle_offset">8dp</dimen>
+    <dimen name="fab_action_icon_size">24dp</dimen>
+    <dimen name="bottom_peek_height">56dp</dimen>
 </resources>

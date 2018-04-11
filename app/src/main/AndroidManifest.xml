@@ -139,6 +139,10 @@
 
         <activity android:name=".sheetfab.SheetfabActivity"/>
 
+        <activity android:name=".circualreveal.CircualrevealActivity"/>
+
+        <activity android:name=".circualreveal.RadialTransformationActivity"/>
+
     </application>
 
 </manifest>
