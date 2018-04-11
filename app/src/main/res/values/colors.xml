@@ -104,4 +104,7 @@
         <item>#689f38</item>
         <item>#FD7044</item>
     </array>
+
+    <color name="indigo500">#3f51b5</color>
+    <color name="divider">#1f000000</color>
 </resources>

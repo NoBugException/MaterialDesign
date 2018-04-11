@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main$Generated" generated="true"><source path="E:\MaterialDesign\materialrangebarlib\src\main\res"/><source path="E:\MaterialDesign\materialrangebarlib\build\generated\res\rs\release"/><source path="E:\MaterialDesign\materialrangebarlib\build\generated\res\resValues\release"/></dataSet><dataSet config="release$Generated" generated="true"><source path="E:\MaterialDesign\materialrangebarlib\src\release\res"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="E:\MaterialDesign\materialrangebarlib\src\main\res"><file name="rotate" path="E:\MaterialDesign\materialrangebarlib\src\main\res\drawable\rotate.xml" qualifiers="" type="drawable"/><file name="roundrect" path="E:\MaterialDesign\materialrangebarlib\src\main\res\drawable\roundrect.xml" qualifiers="" type="drawable"/><file path="E:\MaterialDesign\materialrangebarlib\src\main\res\values\attrs.xml" qualifiers=""><declare-styleable name="RangeBar">
+        <attr format="float" name="mrb_tickStart"/>
+        <attr format="float" name="mrb_tickEnd"/>
+        <attr format="float" name="mrb_tickInterval"/>
+        <attr format="dimension" name="mrb_tickHeight"/>
+        <attr format="color" name="mrb_tickColor"/>
+        <attr format="dimension" name="mrb_barWeight"/>
+        <attr format="reference|color" name="mrb_rangeBarColor"/>
+        <attr format="dimension" name="mrb_selectorSize"/>
+        <attr format="reference|color" name="mrb_selectorBoundaryColor"/>
+        <attr format="dimension" name="mrb_selectorBoundarySize"/>
+        <attr format="reference|color" name="mrb_pinTextColor"/>
+        <attr format="reference|color" name="mrb_pinColor"/>
+        <attr format="dimension" name="mrb_pinPadding"/>
+        <attr format="dimension" name="mrb_pinMinFont"/>
+        <attr format="dimension" name="mrb_pinMaxFont"/>
+        <attr format="dimension" name="mrb_rangeBarPaddingBottom"/>
+        <attr format="reference|color" name="mrb_selectorColor"/>
+        <attr format="boolean" name="mrb_rangeBar"/>
+        <attr format="boolean" name="mrb_temporaryPins"/>
+        <attr format="dimension" name="mrb_connectingLineWeight"/>
+        <attr format="reference|color" name="mrb_connectingLineColor"/>
+        <attr format="dimension" name="mrb_pinRadius"/>
+    </declare-styleable></file><file path="E:\MaterialDesign\materialrangebarlib\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">MaterialRangebar</string></file><file path="E:\MaterialDesign\materialrangebarlib\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="AppBaseTheme">
+        
+    </style><style name="AppBaseTheme" parent="android:Theme.Light">
+        
+    </style></file><file path="E:\MaterialDesign\materialrangebarlib\src\main\res\values-v11\styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        
+    </style></file><file path="E:\MaterialDesign\materialrangebarlib\src\main\res\values-v14\styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        
+    </style></file></source><source path="E:\MaterialDesign\materialrangebarlib\build\generated\res\rs\release"/><source path="E:\MaterialDesign\materialrangebarlib\build\generated\res\resValues\release"/></dataSet><dataSet config="release" generated-set="release$Generated"><source path="E:\MaterialDesign\materialrangebarlib\src\release\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="RangeBar"><attr format="float" name="mrb_tickStart"/><attr format="float" name="mrb_tickEnd"/><attr format="float" name="mrb_tickInterval"/><attr format="dimension" name="mrb_tickHeight"/><attr format="color" name="mrb_tickColor"/><attr format="dimension" name="mrb_barWeight"/><attr format="reference|color" name="mrb_rangeBarColor"/><attr format="dimension" name="mrb_selectorSize"/><attr format="reference|color" name="mrb_selectorBoundaryColor"/><attr format="dimension" name="mrb_selectorBoundarySize"/><attr format="reference|color" name="mrb_pinTextColor"/><attr format="reference|color" name="mrb_pinColor"/><attr format="dimension" name="mrb_pinPadding"/><attr format="dimension" name="mrb_pinMinFont"/><attr format="dimension" name="mrb_pinMaxFont"/><attr format="dimension" name="mrb_rangeBarPaddingBottom"/><attr format="reference|color" name="mrb_selectorColor"/><attr format="boolean" name="mrb_rangeBar"/><attr format="boolean" name="mrb_temporaryPins"/><attr format="dimension" name="mrb_connectingLineWeight"/><attr format="reference|color" name="mrb_connectingLineColor"/><attr format="dimension" name="mrb_pinRadius"/></declare-styleable></configuration></mergedItems></merger>

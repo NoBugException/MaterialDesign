@@ -44,6 +44,7 @@ import com.design.material.materialdesign.pdfview.PDFViewActivity;
 import com.design.material.materialdesign.pdfview.PdfViewBean;
 import com.design.material.materialdesign.qqredflag1.BubbleNotificationActivity;
 import com.design.material.materialdesign.qqredflag2.BezierViewActivity;
+import com.design.material.materialdesign.rangdemo.RangActivity;
 import com.design.material.materialdesign.richtext.RichTextActivity;
 import com.design.material.materialdesign.richtext.RichTextBean;
 import com.design.material.materialdesign.rippleclick1.RippleClickActivity;
@@ -204,6 +205,11 @@ public class MaterialDesign extends BaseActivity {
         bBaseBean8.setName("CircularReveal");
         mDatas.add(bBaseBean8);
 
+        BBaseBean bBaseBean9 = new BBaseBean();
+        bBaseBean9.setFlag(9);
+        bBaseBean9.setName("范围");
+        mDatas.add(bBaseBean9);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -343,6 +349,8 @@ public class MaterialDesign extends BaseActivity {
                                     startActivity(SheetfabActivity.class);
                                 }else if(bbaseBean.getFlag() == 8){
                                     startActivity(CircualrevealActivity.class);
+                                }else if(bbaseBean.getFlag() == 9){
+                                    startActivity(RangActivity.class);
                                 }
                             }
                         });
