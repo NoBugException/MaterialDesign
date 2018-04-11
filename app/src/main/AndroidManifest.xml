@@ -144,6 +144,7 @@
         <activity android:name=".circualreveal.RadialTransformationActivity"/>
         
         <activity android:name=".rangdemo.RangActivity" />
+        <activity android:name=".MaterialEdittextActivity" />
 
     </application>
 

@@ -210,6 +210,11 @@ public class MaterialDesign extends BaseActivity {
         bBaseBean9.setName("范围");
         mDatas.add(bBaseBean9);
 
+        BBaseBean bBaseBean10 = new BBaseBean();
+        bBaseBean10.setFlag(10);
+        bBaseBean10.setName("EditText");
+        mDatas.add(bBaseBean10);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -351,6 +356,8 @@ public class MaterialDesign extends BaseActivity {
                                     startActivity(CircualrevealActivity.class);
                                 }else if(bbaseBean.getFlag() == 9){
                                     startActivity(RangActivity.class);
+                                }else if(bbaseBean.getFlag() == 10){
+                                    startActivity(MaterialEdittextActivity.class);
                                 }
                             }
                         });
