@@ -144,7 +144,34 @@
         <activity android:name=".circualreveal.RadialTransformationActivity"/>
         
         <activity android:name=".rangdemo.RangActivity" />
+
         <activity android:name=".MaterialEdittextActivity" />
+
+        <activity android:name=".materialcalendarview.BasicActivity" />
+
+        <activity android:name=".materialcalendarview.BasicActivityDecorated" />
+
+        <activity android:name=".materialcalendarview.CustomizeCodeActivity" />
+
+        <activity android:name=".materialcalendarview.CustomizeXmlActivity" />
+
+        <activity android:name=".materialcalendarview.CustomTileDimensions" />
+
+        <activity android:name=".materialcalendarview.DialogsActivity" />
+
+        <activity android:name=".materialcalendarview.DisableDaysActivity" />
+
+        <activity android:name=".materialcalendarview.DynamicSettersActivity" />
+
+        <activity android:name=".materialcalendarview.MultipleSizeActivity" />
+
+        <activity android:name=".materialcalendarview.MultipleViewActivity" />
+
+        <activity android:name=".materialcalendarview.OldCalendarViewActivity" />
+
+        <activity android:name=".materialcalendarview.SwappableBasicActivityDecorated" />
+
+        <activity android:name=".materialcalendarview.CalendarActivity" />
 
     </application>
 

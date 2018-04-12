@@ -38,6 +38,7 @@ import com.design.material.materialdesign.loadview.LoadViewActivity;
 import com.design.material.materialdesign.loadview.LoadViewBean;
 import com.design.material.materialdesign.mateballloading.MateBallLoadingActivity;
 import com.design.material.materialdesign.mateballloading.MateBallLoadingBean;
+import com.design.material.materialdesign.materialcalendarview.CalendarActivity;
 import com.design.material.materialdesign.multidialog.MultiDialogActivity;
 import com.design.material.materialdesign.multidialog.MultiDialogBean;
 import com.design.material.materialdesign.pdfview.PDFViewActivity;
@@ -215,6 +216,11 @@ public class MaterialDesign extends BaseActivity {
         bBaseBean10.setName("EditText");
         mDatas.add(bBaseBean10);
 
+        BBaseBean bBaseBean11 = new BBaseBean();
+        bBaseBean11.setFlag(11);
+        bBaseBean11.setName("各种日历");
+        mDatas.add(bBaseBean11);
+
         LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
         //设置RecyclerView 布局
         mRecyclerView.setLayoutManager(layoutmanager);
@@ -358,6 +364,8 @@ public class MaterialDesign extends BaseActivity {
                                     startActivity(RangActivity.class);
                                 }else if(bbaseBean.getFlag() == 10){
                                     startActivity(MaterialEdittextActivity.class);
+                                }else if(bbaseBean.getFlag() == 11){
+                                    startActivity(CalendarActivity.class);
                                 }
                             }
                         });

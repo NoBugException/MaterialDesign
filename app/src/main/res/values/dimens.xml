@@ -283,4 +283,8 @@
 
     <dimen name="datepicker_view_animator_height">226dp</dimen>
 
+    <dimen name="calendar_size_small">100dp</dimen>
+    <dimen name="tile_size_medium">32dp</dimen>
+    <dimen name="tile_size_small">16dp</dimen>
+
 </resources>
