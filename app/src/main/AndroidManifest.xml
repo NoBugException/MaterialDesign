@@ -172,6 +172,7 @@
         <activity android:name=".materialcalendarview.SwappableBasicActivityDecorated" />
 
         <activity android:name=".materialcalendarview.CalendarActivity" />
+        <activity android:name=".materialdemo.demo.MaterialDemoActivity" />
 
     </application>
 

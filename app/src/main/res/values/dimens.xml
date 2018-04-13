@@ -287,4 +287,9 @@
     <dimen name="tile_size_medium">32dp</dimen>
     <dimen name="tile_size_small">16dp</dimen>
 
+    <dimen name="drawer_width">240dp</dimen>
+    <dimen name="drawer_text">20sp</dimen>
+    <dimen name="title_text">16sp</dimen>
+
+    <dimen name="bt_height">36dp</dimen>
 </resources>
